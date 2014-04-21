@@ -165,12 +165,48 @@
 					var missouriSTArray = new Array();
 					missouriSTArray[0] = snapshot.val().UniversityofMissouriST.major1;
 					missouriSTArray[1] = snapshot.val().UniversityofMissouriST.major2;
+          missouriSTArray[2] = snapshot.val().UniversityofMissouriST.major3;
+          missouriSTArray[3] = snapshot.val().UniversityofMissouriST.major4;
+          missouriSTArray[4] = snapshot.val().UniversityofMissouriST.major5;
+          missouriSTArray[5] = snapshot.val().UniversityofMissouriST.major6;
+          missouriSTArray[6] = snapshot.val().UniversityofMissouriST.major7;
+          missouriSTArray[7] = snapshot.val().UniversityofMissouriST.major8;
+          missouriSTArray[8] = snapshot.val().UniversityofMissouriST.major9;
+          missouriSTArray[9] = snapshot.val().UniversityofMissouriST.major10;
+          missouriSTArray[10] = snapshot.val().UniversityofMissouriST.major11;
+          missouriSTArray[11] = snapshot.val().UniversityofMissouriST.major12;
+          missouriSTArray[12] = snapshot.val().UniversityofMissouriST.major13;
+          missouriSTArray[13] = snapshot.val().UniversityofMissouriST.major14;
+          missouriSTArray[14] = snapshot.val().UniversityofMissouriST.major15;
+          missouriSTArray[15] = snapshot.val().UniversityofMissouriST.major16;
+          missouriSTArray[16] = snapshot.val().UniversityofMissouriST.major17;
+          missouriSTArray[17] = snapshot.val().UniversityofMissouriST.major18;
+          missouriSTArray[18] = snapshot.val().UniversityofMissouriST.major19;
+          missouriSTArray[19] = snapshot.val().UniversityofMissouriST.major20;
+          missouriSTArray[20] = snapshot.val().UniversityofMissouriST.major21;
+          missouriSTArray[21] = snapshot.val().UniversityofMissouriST.major22;
+          missouriSTArray[22] = snapshot.val().UniversityofMissouriST.major23;
+          missouriSTArray[23] = snapshot.val().UniversityofMissouriST.major24;
+          missouriSTArray[24] = snapshot.val().UniversityofMissouriST.major25;
+          missouriSTArray[25] = snapshot.val().UniversityofMissouriST.major26;
+          missouriSTArray[26] = snapshot.val().UniversityofMissouriST.major27;
+          missouriSTArray[27] = snapshot.val().UniversityofMissouriST.major28;
+          missouriSTArray[28] = snapshot.val().UniversityofMissouriST.major29;
+          missouriSTArray[29] = snapshot.val().UniversityofMissouriST.major30;
+          
 
-					for(var i=0;i<2;i++){
+					for(var i=0;i<30;i++){
 						if(text===missouriSTArray[i]){
 							var missouriST = new google.maps.LatLng(37.953720,-91.775150);
-							
 
+              var mapOptions = {
+                center: new google.maps.LatLng(38.349139,-92.373804),
+                  zoom: 7,
+                  mapTypeId: google.maps.MapTypeId.TERRAIN
+              }
+
+              var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+							
 							// To add the marker to the map, use the 'map' property
 							var marker = new google.maps.Marker({
 								animation:google.maps.Animation.DROP,
@@ -189,7 +225,7 @@
       							'</div>'+
       							'</div>';
 
-      						var infowindowuniversityofmissourist = new google.maps.InfoWindow();
+      				var infowindowuniversityofmissourist = new google.maps.InfoWindow();
 
 							makeInfoWindowEvent(map, infowindowuniversityofmissourist, contentUniversityofMissouriST, marker);
 						}
@@ -202,7 +238,14 @@
 					for(var i=0;i<2;i++){
 						if(text===missouriUMKCArray[i]){
 							var missouriUMKC = new google.maps.LatLng(39.091794,-94.550530);
-							
+
+              var mapOptions = {
+                center: new google.maps.LatLng(38.349139,-92.373804),
+                  zoom: 7,
+                  mapTypeId: google.maps.MapTypeId.TERRAIN
+              }
+
+              var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
 							// To add the marker to the map, use the 'map' property
 							var marker = new google.maps.Marker({
@@ -222,7 +265,7 @@
       							'</div>'+
       							'</div>';
 
-      						var infowindowuniversityofmissouriumkc = new google.maps.InfoWindow();
+      				var infowindowuniversityofmissouriumkc = new google.maps.InfoWindow();
 
 							makeInfoWindowEvent(map, infowindowuniversityofmissouriumkc, contentUniversityofMissouriUMKC, marker);
 						}
@@ -235,7 +278,14 @@
 					for(var i=0;i<2;i++){
 						if(text===missouriSTLouisArray[i]){
 							var missouriSTLouis = new google.maps.LatLng(38.627003,-90.199404);
-							
+
+              var mapOptions = {
+                center: new google.maps.LatLng(38.349139,-92.373804),
+                  zoom: 7,
+                  mapTypeId: google.maps.MapTypeId.TERRAIN
+              }
+
+              var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
 							// To add the marker to the map, use the 'map' property
 							var marker = new google.maps.Marker({
@@ -255,7 +305,7 @@
       							'</div>'+
       							'</div>';
 
-      						var infowindowuniversityofmissouristlouis = new google.maps.InfoWindow();
+      				var infowindowuniversityofmissouristlouis = new google.maps.InfoWindow();
 
 							makeInfoWindowEvent(map, infowindowuniversityofmissouristlouis, contentUniversityofMissouriSTLouis, marker);
 						}
@@ -266,9 +316,9 @@
         					infowindow.setContent(contentString);
         					infowindow.open(map, marker);
       					});
-    				}
+    			}
 				});
-    		}
+    	}
 		</script>
 	</head>
 
@@ -281,85 +331,101 @@
 	<div align="center">
 		<form id="form-search" class="form-inline" >
 			<select id="selection" class="form-control">
-        		<option value="1">Select A Major</option>
-        		<option value="2">Accountancy</option>
-        		<option value="3">Agribusiness Management</option>
-        		<option value="4">Agricultural Economics</option>
-        		<option value="5">Agricultural Education</option>
-        		<option value="6">Agricultural Systems Management</option>
-        		<option value="7">Agriculture</option>
-        		<option value="8">Animal Sciences</option>
-        		<option value="9">Anthropology</option>
-        		<option value="10">Architectural Studies</option>
-        		<option value="11">Art</option>
-        		<option value="12">Art History and Archaeology</option>
-        		<option value="13">Athletic Training</option>
-        		<option value="14">Biochemistry</option>
-        		<option value="15">Biological Engineering</option>
-        		<option value="16">Biological Sciences</option>
-        		<option value="17">Business Administration</option>
-        		<option value="18">Chemical Engineering</option>
-        		<option value="19">Chemistry</option>
-        		<option value="20">Civil Engineering</option>
-        		<option value="21">Classics</option>
-        		<option value="22">Clinical Laboratory</option>
-        		<option value="23">Communication</option>
-        		<option value="24">Communication Science and Disorders</option>
-        		<option value="25">Computer Engineering</option>
-        		<option value="26">Computer Science</option>
-        		<option value="27">Diagnostic Medical Ultrasound</option>
-        		<option value="28">Early Childhood Education</option>
-        		<option value="29">Economics</option>
-        		<option value="30">Educational Studies</option>
-        		<option value="31">Electrical Engineering</option>
-        		<option value="32">Elementary Education</option>
-        		<option value="33">English</option>
-        		<option value="34">Film Studies</option>
-        		<option value="35">Fisheries and Wildlife</option>
-        		<option value="36">Food Science and Nutrition</option>
-        		<option value="37">Forestry</option>
-        		<option value="38">General Studies</option>
-        		<option value="39">Geography</option>
-        		<option value="40">Geological Sciences</option>
-        		<option value="41">German</option>
-        		<option value="42">Health Science</option>
-        		<option value="43">History</option>
-        		<option value="44">Hospitality Management</option>
-        		<option value="45">Human Development and Family Studies</option>
-        		<option value="46">Industrial Engineering</option>
-        		<option value="47">Information Technology</option>
-        		<option value="48">Interdisciplinary Studies</option>
-        		<option value="49">International Studies</option>
-        		<option value="50">Journalism</option>
-        		<option value="51">Linguistics</option>
-        		<option value="52">Mathematics</option>
-        		<option value="53">Mechanical Engineering</option>
-        		<option value="54">Middle School Education</option>
-        		<option value="55">Music</option>
-        		<option value="56">Nursing</option>
-        		<option value="57">Nutritional Sciences</option>
-        		<option value="58">Occupational Therapy</option>
-        		<option value="59">Parks, Recreation and Tourism</option>
-        		<option value="60">Personal Financial Planning</option>
-        		<option value="61">Philosophy</option>
-        		<option value="62">Physics</option>
-        		<option value="63">Plant Sciences</option>
-        		<option value="64">Political Science</option>
-        		<option value="65">Psychology</option>
-        		<option value="66">Radiologic Sciences</option>
-        		<option value="67">Religious Studies</option>
-        		<option value="68">Respiratory Therapy</option>
-        		<option value="69">Romance Languages</option>
-        		<option value="70">Russian</option>
-        		<option value="71">Science and Agricultural Journalism</option>
-        		<option value="72">Secondary Education</option>
-        		<option value="73">Social Work</option>
-        		<option value="74">Sociology</option>
-        		<option value="75">Soil, Environmental and Atmospheric Sciences</option>
-        		<option value="76">Special Education</option>
-        		<option value="77">Statistics</option>
-        		<option value="78">Textile and Apparel Management</option>
-        		<option value="79">Theatre</option>
+        		<option>Select A Major</option>
+        		<option>Accountancy</option>
+            <option>Aerospace Engineering</option>
+        		<option>Agribusiness Management</option>
+        		<option>Agricultural Economics</option>
+        		<option>Agricultural Education</option>
+        		<option>Agricultural Systems Management</option>
+        		<option>Agriculture</option>
+        		<option>Animal Sciences</option>
+        		<option>Anthropology</option>
+            <option>Applied Mathematics</option>
+            <option>Architectural Engineering</option>
+        		<option>Architectural Studies</option>
+        		<option>Art</option>
+        		<option>Art History and Archaeology</option>
+        		<option>Athletic Training</option>
+        		<option>Biochemistry</option>
+        		<option>Biological Engineering</option>
+        		<option>Biological Sciences</option>
+        		<option>Business Administration</option>
+            <option>Business and Management Systems</option>
+            <option>Ceramic Engineering</option>
+        		<option>Chemical Engineering</option>
+        		<option>Chemistry</option>
+        		<option>Civil Engineering</option>
+        		<option>Classics</option>
+        		<option>Clinical Laboratory</option>
+        		<option>Communication</option>
+        		<option>Communication Science and Disorders</option>
+        		<option>Computer Engineering</option>
+        		<option>Computer Science</option>
+        		<option>Diagnostic Medical Ultrasound</option>
+        		<option>Early Childhood Education</option>
+        		<option>Economics</option>
+        		<option>Educational Studies</option>
+        		<option>Electrical Engineering</option>
+        		<option>Elementary Education</option>
+            <option>Engineering Management</option>
+        		<option>English</option>
+            <option>Environmental Engineering</option>
+        		<option>Film Studies</option>
+        		<option>Fisheries and Wildlife</option>
+        		<option>Food Science and Nutrition</option>
+        		<option>Forestry</option>
+        		<option>General Studies</option>
+        		<option>Geography</option>
+            <option>Geological Engineering</option>
+        		<option>Geological Sciences</option>
+            <option>Geology and Geophysics</option>
+        		<option>German</option>
+        		<option>Health Science</option>
+        		<option>History</option>
+        		<option>Hospitality Management</option>
+        		<option>Human Development and Family Studies</option>
+        		<option>Industrial Engineering</option>
+            <option>Information Science and Technology</option>
+        		<option>Information Technology</option>
+        		<option>Interdisciplinary Studies</option>
+        		<option>International Studies</option>
+        		<option>Journalism</option>
+        		<option>Linguistics</option>
+        		<option>Mathematics</option>
+        		<option>Mechanical Engineering</option>
+            <option>Metallurgical Engineering</option>
+        		<option>Middle School Education</option>
+            <option>Mining Engineering</option>
+            <option>Multidisciplinary Studies</option>
+        		<option>Music</option>
+            <option>Nuclear Engineering</option>
+        		<option>Nursing</option>
+        		<option>Nutritional Sciences</option>
+        		<option>Occupational Therapy</option>
+        		<option>Parks, Recreation and Tourism</option>
+        		<option>Personal Financial Planning</option>
+            <option>Petroleum Engineering</option>
+        		<option>Philosophy</option>
+        		<option>Physics</option>
+        		<option>Plant Sciences</option>
+        		<option>Political Science</option>
+        		<option>Psychology</option>
+        		<option>Radiologic Sciences</option>
+        		<option>Religious Studies</option>
+        		<option>Respiratory Therapy</option>
+        		<option>Romance Languages</option>
+        		<option>Russian</option>
+        		<option>Science and Agricultural Journalism</option>
+        		<option>Secondary Education</option>
+        		<option>Social Work</option>
+        		<option>Sociology</option>
+        		<option>Soil, Environmental and Atmospheric Sciences</option>
+        		<option>Special Education</option>
+        		<option>Statistics</option>
+            <option>Technical Communication</option>
+        		<option>Textile and Apparel Management</option>
+        		<option>Theatre</option>
         	</select>
 		</form>
     <button class="btn btn-success" type="submit" onclick="Search()">Search</button>
