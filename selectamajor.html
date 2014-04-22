@@ -125,11 +125,14 @@
           universityOfMissouriArray[76] = snapshot.val().UniversityofMissouri.major77;
           universityOfMissouriArray[77] = snapshot.val().UniversityofMissouri.major78;
           universityOfMissouriArray[78] = snapshot.val().UniversityofMissouri.major79;
+          universityOfMissouriArray[79] = snapshot.val().UniversityofMissouri.check;
 
 					for(var j=0;j<79;j++){
 						if(text===universityOfMissouriArray[j]){
-							var universityOfMissouri = new google.maps.LatLng(38.933139,-92.373804);
-							
+              universityOfMissouriArray[79] = 1;
+
+              var universityOfMissouri = new google.maps.LatLng(38.933139,-92.373804);
+
 							var mapOptions = {
 								center: new google.maps.LatLng(38.349139,-92.373804),
   								zoom: 7,
@@ -193,20 +196,24 @@
           missouriSTArray[27] = snapshot.val().UniversityofMissouriST.major28;
           missouriSTArray[28] = snapshot.val().UniversityofMissouriST.major29;
           missouriSTArray[29] = snapshot.val().UniversityofMissouriST.major30;
-          
+          missouriSTArray[30] = snapshot.val().UniversityofMissouriST.check;
 
 					for(var i=0;i<30;i++){
 						if(text===missouriSTArray[i]){
+              missouriSTArray[30] = 1;
+
 							var missouriST = new google.maps.LatLng(37.953720,-91.775150);
 
-              var mapOptions = {
-                center: new google.maps.LatLng(38.349139,-92.373804),
-                  zoom: 7,
-                  mapTypeId: google.maps.MapTypeId.TERRAIN
+              if(universityOfMissouriArray[79]!=1){
+                var mapOptions = {
+                  center: new google.maps.LatLng(38.349139,-92.373804),
+                    zoom: 7,
+                    mapTypeId: google.maps.MapTypeId.TERRAIN
+                }
+
+                var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
               }
 
-              var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-							
 							// To add the marker to the map, use the 'map' property
 							var marker = new google.maps.Marker({
 								animation:google.maps.Animation.DROP,
@@ -231,86 +238,8 @@
 						}
 					}
 
-					var missouriUMKCArray = new Array();
-					missouriUMKCArray[0] = snapshot.val().UniversityofMissouriKC.major1;
-					missouriUMKCArray[1] = snapshot.val().UniversityofMissouriKC.major2;
-
-					for(var i=0;i<2;i++){
-						if(text===missouriUMKCArray[i]){
-							var missouriUMKC = new google.maps.LatLng(39.091794,-94.550530);
-
-              var mapOptions = {
-                center: new google.maps.LatLng(38.349139,-92.373804),
-                  zoom: 7,
-                  mapTypeId: google.maps.MapTypeId.TERRAIN
-              }
-
-              var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-
-							// To add the marker to the map, use the 'map' property
-							var marker = new google.maps.Marker({
-								animation:google.maps.Animation.DROP,
-    							position: missouriUMKC,
-    							map: map,
-    							title:"University of Missouri Kansas City"
-							});
-
-							var contentUniversityofMissouriUMKC = '<div id="content">'+
-      							'<div id="siteNotice">'+
-      							'</div>'+
-      							'<div id="bodyContent">'+
-      							'<p><b>University of Missouri - Kansas City</b></p>'+
-      							'<p><a href="http://www.umkc.edu/">'+
-      							'Visit Website</a> '+
-      							'</div>'+
-      							'</div>';
-
-      				var infowindowuniversityofmissouriumkc = new google.maps.InfoWindow();
-
-							makeInfoWindowEvent(map, infowindowuniversityofmissouriumkc, contentUniversityofMissouriUMKC, marker);
-						}
-					}
-
-					var missouriSTLouisArray = new Array();
-					missouriSTLouisArray[0] = snapshot.val().UniversityofMissouriSTLouis.major1;
-					missouriSTLouisArray[1] = snapshot.val().UniversityofMissouriSTLouis.major2;
-
-					for(var i=0;i<2;i++){
-						if(text===missouriSTLouisArray[i]){
-							var missouriSTLouis = new google.maps.LatLng(38.627003,-90.199404);
-
-              var mapOptions = {
-                center: new google.maps.LatLng(38.349139,-92.373804),
-                  zoom: 7,
-                  mapTypeId: google.maps.MapTypeId.TERRAIN
-              }
-
-              var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-
-							// To add the marker to the map, use the 'map' property
-							var marker = new google.maps.Marker({
-								animation:google.maps.Animation.DROP,
-    							position: missouriSTLouis,
-    							map: map,
-    							title:"University of Missouri St. Louis"
-							});
-
-							var contentUniversityofMissouriSTLouis = '<div id="content">'+
-      							'<div id="siteNotice">'+
-      							'</div>'+
-      							'<div id="bodyContent">'+
-      							'<p><b>University of Missouri - St. Louis</b></p>'+
-      							'<p><a href="http://www.umsl.edu/">'+
-      							'Visit Website</a> '+
-      							'</div>'+
-      							'</div>';
-
-      				var infowindowuniversityofmissouristlouis = new google.maps.InfoWindow();
-
-							makeInfoWindowEvent(map, infowindowuniversityofmissouristlouis, contentUniversityofMissouriSTLouis, marker);
-						}
-					}
-
+          
+					
 					function makeInfoWindowEvent(map, infowindow, contentString, marker) {
       					google.maps.event.addListener(marker, 'click', function() {
         					infowindow.setContent(contentString);
