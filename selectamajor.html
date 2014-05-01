@@ -196,11 +196,12 @@
           missouriSTArray[27] = snapshot.val().UniversityofMissouriST.major28;
           missouriSTArray[28] = snapshot.val().UniversityofMissouriST.major29;
           missouriSTArray[29] = snapshot.val().UniversityofMissouriST.major30;
-          missouriSTArray[30] = snapshot.val().UniversityofMissouriST.check;
+          missouriSTArray[30] = snapshot.val().UniversityofMissouriST.major31;
+          missouriSTArray[31] = snapshot.val().UniversityofMissouriST.check;
 
-					for(var i=0;i<30;i++){
+					for(var i=0;i<31;i++){
 						if(text===missouriSTArray[i]){
-              missouriSTArray[30] = 1;
+              missouriSTArray[31] = 1;
 
 							var missouriST = new google.maps.LatLng(37.953720,-91.775150);
 
@@ -238,7 +239,141 @@
 						}
 					}
 
-          
+          var harrisStowe = new Array();
+          harrisStowe[0] = snapshot.val().HarrisStowe.major1;
+          harrisStowe[1] = snapshot.val().HarrisStowe.major2;
+          harrisStowe[2] = snapshot.val().HarrisStowe.major3;
+          harrisStowe[3] = snapshot.val().HarrisStowe.major4;
+          harrisStowe[4] = snapshot.val().HarrisStowe.major5;
+          harrisStowe[5] = snapshot.val().HarrisStowe.major6;
+          harrisStowe[6] = snapshot.val().HarrisStowe.major7;
+          harrisStowe[7] = snapshot.val().HarrisStowe.major8;
+          harrisStowe[8] = snapshot.val().HarrisStowe.major9;
+          harrisStowe[9] = snapshot.val().HarrisStowe.major10;
+          harrisStowe[10] = snapshot.val().HarrisStowe.major11;
+          harrisStowe[11] = snapshot.val().HarrisStowe.major12;
+          harrisStowe[12] = snapshot.val().HarrisStowe.major13;
+          harrisStowe[13] = snapshot.val().HarrisStowe.major14;
+          harrisStowe[14] = snapshot.val().HarrisStowe.major15;
+          harrisStowe[15] = snapshot.val().HarrisStowe.major16;
+          harrisStowe[16] = snapshot.val().HarrisStowe.check;
+
+          for(var i=0;i<16;i++){
+            if(text===harrisStowe[i]){
+              harrisStowe[16] = 1;
+
+              var harrisStowe = new google.maps.LatLng(38.632708,-90.224303);
+
+              if(universityOfMissouriArray[79]!=1&&missouriSTArray[31]!=1){
+                var mapOptions = {
+                  center: new google.maps.LatLng(38.349139,-92.373804),
+                    zoom: 7,
+                    mapTypeId: google.maps.MapTypeId.TERRAIN
+                }
+
+                var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+              }
+
+              // To add the marker to the map, use the 'map' property
+              var marker = new google.maps.Marker({
+                animation:google.maps.Animation.DROP,
+                  position: harrisStowe,
+                  map: map,
+                  title:"Harris-Stowe State University"
+              });
+
+              var contentHarrisStowe = '<div id="content">'+
+                    '<div id="siteNotice">'+
+                    '</div>'+
+                    '<div id="bodyContent">'+
+                    '<p><b>Harris-Stowe State University</b></p>'+
+                    '<p><a href="http://www.hssu.edu/">'+
+                    'Visit Website</a> '+
+                    '</div>'+
+                    '</div>';
+
+              var infowindowharrisstowe = new google.maps.InfoWindow();
+
+              makeInfoWindowEvent(map, infowindowharrisstowe, contentHarrisStowe, marker);
+            }
+          }
+
+          var lincoln = new Array();
+          lincoln[0] = snapshot.val().Lincoln.major1;
+          lincoln[1] = snapshot.val().Lincoln.major2;
+          lincoln[2] = snapshot.val().Lincoln.major3;
+          lincoln[3] = snapshot.val().Lincoln.major4;
+          lincoln[4] = snapshot.val().Lincoln.major5;
+          lincoln[5] = snapshot.val().Lincoln.major6;
+          lincoln[6] = snapshot.val().Lincoln.major7;
+          lincoln[7] = snapshot.val().Lincoln.major8;
+          lincoln[8] = snapshot.val().Lincoln.major9;
+          lincoln[9] = snapshot.val().Lincoln.major10;
+          lincoln[10] = snapshot.val().Lincoln.major11;
+          lincoln[11] = snapshot.val().Lincoln.major12;
+          lincoln[12] = snapshot.val().Lincoln.major13;
+          lincoln[13] = snapshot.val().Lincoln.major14;
+          lincoln[14] = snapshot.val().Lincoln.major15;
+          lincoln[15] = snapshot.val().Lincoln.major16;
+          lincoln[16] = snapshot.val().Lincoln.major17;
+          lincoln[17] = snapshot.val().Lincoln.major18;
+          lincoln[18] = snapshot.val().Lincoln.major19;
+          lincoln[19] = snapshot.val().Lincoln.major20;
+          lincoln[20] = snapshot.val().Lincoln.major21;
+          lincoln[21] = snapshot.val().Lincoln.major22;
+          lincoln[22] = snapshot.val().Lincoln.major23;
+          lincoln[23] = snapshot.val().Lincoln.major24;
+          lincoln[24] = snapshot.val().Lincoln.major25;
+          lincoln[25] = snapshot.val().Lincoln.major26;
+          lincoln[26] = snapshot.val().Lincoln.major27;
+          lincoln[27] = snapshot.val().Lincoln.major28;
+          lincoln[28] = snapshot.val().Lincoln.major29;
+          lincoln[29] = snapshot.val().Lincoln.major30;
+          lincoln[30] = snapshot.val().Lincoln.major31;
+          lincoln[31] = snapshot.val().Lincoln.major32;
+          lincoln[32] = snapshot.val().Lincoln.major33;
+          lincoln[33] = snapshot.val().Lincoln.major34;
+          lincoln[34] = snapshot.val().Lincoln.check;
+
+          for(var i=0;i<34;i++){
+            if(text===lincoln[i]){
+              lincoln[16] = 1;
+
+              var lincoln = new google.maps.LatLng(38.564674,-92.169392);
+
+              if(universityOfMissouriArray[79]!=1&&missouriSTArray[31]!=1&&harrisStowe[16]!=1){
+                var mapOptions = {
+                  center: new google.maps.LatLng(38.349139,-92.373804),
+                    zoom: 7,
+                    mapTypeId: google.maps.MapTypeId.TERRAIN
+                }
+
+                var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+              }
+
+              // To add the marker to the map, use the 'map' property
+              var marker = new google.maps.Marker({
+                animation:google.maps.Animation.DROP,
+                  position: lincoln,
+                  map: map,
+                  title:"Lincoln University"
+              });
+
+              var contentLincoln = '<div id="content">'+
+                    '<div id="siteNotice">'+
+                    '</div>'+
+                    '<div id="bodyContent">'+
+                    '<p><b>Lincoln University</b></p>'+
+                    '<p><a href="http://www.lincolnu.edu/">'+
+                    'Visit Website</a> '+
+                    '</div>'+
+                    '</div>';
+
+              var infowindowlincoln = new google.maps.InfoWindow();
+
+              makeInfoWindowEvent(map, infowindowlincoln, contentLincoln, marker);
+            }
+          }
 					
 					function makeInfoWindowEvent(map, infowindow, contentString, marker) {
       					google.maps.event.addListener(marker, 'click', function() {
@@ -263,6 +398,7 @@
         		<option>Select A Major</option>
         		<option>Accountancy</option>
             <option>Aerospace Engineering</option>
+            <option>Agribusiness</option>
         		<option>Agribusiness Management</option>
         		<option>Agricultural Economics</option>
         		<option>Agricultural Education</option>
@@ -274,23 +410,29 @@
             <option>Architectural Engineering</option>
         		<option>Architectural Studies</option>
         		<option>Art</option>
+            <option>Art Education</option>
         		<option>Art History and Archaeology</option>
         		<option>Athletic Training</option>
         		<option>Biochemistry</option>
         		<option>Biological Engineering</option>
         		<option>Biological Sciences</option>
+            <option>Biology</option>
         		<option>Business Administration</option>
             <option>Business and Management Systems</option>
+            <option>Business Education</option>
             <option>Ceramic Engineering</option>
         		<option>Chemical Engineering</option>
         		<option>Chemistry</option>
         		<option>Civil Engineering</option>
+            <option>Civil Engineering Technology</option>
         		<option>Classics</option>
         		<option>Clinical Laboratory</option>
         		<option>Communication</option>
         		<option>Communication Science and Disorders</option>
         		<option>Computer Engineering</option>
+            <option>Computer Information Systems</option>
         		<option>Computer Science</option>
+            <option>Criminal Justice</option>
         		<option>Diagnostic Medical Ultrasound</option>
         		<option>Early Childhood Education</option>
         		<option>Economics</option>
@@ -300,6 +442,7 @@
             <option>Engineering Management</option>
         		<option>English</option>
             <option>Environmental Engineering</option>
+            <option>Environmental Science</option>
         		<option>Film Studies</option>
         		<option>Fisheries and Wildlife</option>
         		<option>Food Science and Nutrition</option>
@@ -310,8 +453,11 @@
         		<option>Geological Sciences</option>
             <option>Geology and Geophysics</option>
         		<option>German</option>
+            <option>Health and Physical Education</option>
+            <option>Health Care Management</option>
         		<option>Health Science</option>
         		<option>History</option>
+            <option>Hospitality and Tourism Management</option>
         		<option>Hospitality Management</option>
         		<option>Human Development and Family Studies</option>
         		<option>Industrial Engineering</option>
@@ -320,18 +466,23 @@
         		<option>Interdisciplinary Studies</option>
         		<option>International Studies</option>
         		<option>Journalism</option>
+            <option>Liberal Studies</option>
         		<option>Linguistics</option>
+            <option>Marketing</option>
         		<option>Mathematics</option>
         		<option>Mechanical Engineering</option>
+            <option>Mechanical Technology</option>
             <option>Metallurgical Engineering</option>
         		<option>Middle School Education</option>
             <option>Mining Engineering</option>
             <option>Multidisciplinary Studies</option>
         		<option>Music</option>
+            <option>Music Education</option>
             <option>Nuclear Engineering</option>
         		<option>Nursing</option>
         		<option>Nutritional Sciences</option>
         		<option>Occupational Therapy</option>
+            <option>Office Management</option>
         		<option>Parks, Recreation and Tourism</option>
         		<option>Personal Financial Planning</option>
             <option>Petroleum Engineering</option>
@@ -339,22 +490,28 @@
         		<option>Physics</option>
         		<option>Plant Sciences</option>
         		<option>Political Science</option>
+            <option>Professional Interdisciplinary Studies</option>
         		<option>Psychology</option>
         		<option>Radiologic Sciences</option>
         		<option>Religious Studies</option>
         		<option>Respiratory Therapy</option>
         		<option>Romance Languages</option>
         		<option>Russian</option>
+            <option>Sacred Music</option>
         		<option>Science and Agricultural Journalism</option>
         		<option>Secondary Education</option>
+            <option>Social Science Education</option>
         		<option>Social Work</option>
         		<option>Sociology</option>
         		<option>Soil, Environmental and Atmospheric Sciences</option>
+            <option>Spanish</option>
         		<option>Special Education</option>
         		<option>Statistics</option>
             <option>Technical Communication</option>
         		<option>Textile and Apparel Management</option>
         		<option>Theatre</option>
+            <option>Urban Education</option>
+            <option>Wellness</option>
         	</select>
 		</form>
     <button class="btn btn-success" type="submit" onclick="Search()">Search</button>
