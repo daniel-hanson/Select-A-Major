@@ -337,7 +337,7 @@
 
           for(var i=0;i<34;i++){
             if(text===lincoln[i]){
-              lincoln[16] = 1;
+              lincoln[34] = 1;
 
               var lincoln = new google.maps.LatLng(38.564674,-92.169392);
 
@@ -375,6 +375,231 @@
             }
           }
 					
+          var missouriSouthern = new Array();
+          missouriSouthern[0] = snapshot.val().MissouriSouthern.major1;
+          missouriSouthern[1] = snapshot.val().MissouriSouthern.major2;
+          missouriSouthern[2] = snapshot.val().MissouriSouthern.major3;
+          missouriSouthern[3] = snapshot.val().MissouriSouthern.major4;
+          missouriSouthern[4] = snapshot.val().MissouriSouthern.major5;
+          missouriSouthern[5] = snapshot.val().MissouriSouthern.major6;
+          missouriSouthern[6] = snapshot.val().MissouriSouthern.major7;
+          missouriSouthern[7] = snapshot.val().MissouriSouthern.major8;
+          missouriSouthern[8] = snapshot.val().MissouriSouthern.major9;
+          missouriSouthern[9] = snapshot.val().MissouriSouthern.major10;
+          missouriSouthern[10] = snapshot.val().MissouriSouthern.major11;
+          missouriSouthern[11] = snapshot.val().MissouriSouthern.major12;
+          missouriSouthern[12] = snapshot.val().MissouriSouthern.major13;
+          missouriSouthern[13] = snapshot.val().MissouriSouthern.major14;
+          missouriSouthern[14] = snapshot.val().MissouriSouthern.major15;
+          missouriSouthern[15] = snapshot.val().MissouriSouthern.major16;
+          missouriSouthern[16] = snapshot.val().MissouriSouthern.major17;
+          missouriSouthern[17] = snapshot.val().MissouriSouthern.major18;
+          missouriSouthern[18] = snapshot.val().MissouriSouthern.major19;
+          missouriSouthern[19] = snapshot.val().MissouriSouthern.major20;
+          missouriSouthern[20] = snapshot.val().MissouriSouthern.major21;
+          missouriSouthern[21] = snapshot.val().MissouriSouthern.major22;
+          missouriSouthern[22] = snapshot.val().MissouriSouthern.major23;
+          missouriSouthern[23] = snapshot.val().MissouriSouthern.major24;
+          missouriSouthern[24] = snapshot.val().MissouriSouthern.major25;
+          missouriSouthern[25] = snapshot.val().MissouriSouthern.major26;
+          missouriSouthern[26] = snapshot.val().MissouriSouthern.major27;
+          missouriSouthern[27] = snapshot.val().MissouriSouthern.major28;
+          missouriSouthern[28] = snapshot.val().MissouriSouthern.major29;
+          missouriSouthern[29] = snapshot.val().MissouriSouthern.major30;
+          missouriSouthern[30] = snapshot.val().MissouriSouthern.major31;
+          missouriSouthern[31] = snapshot.val().MissouriSouthern.major32;
+          missouriSouthern[32] = snapshot.val().MissouriSouthern.major33;
+          missouriSouthern[33] = snapshot.val().MissouriSouthern.major34;
+          missouriSouthern[34] = snapshot.val().MissouriSouthern.major35;
+          missouriSouthern[35] = snapshot.val().MissouriSouthern.major36;
+          missouriSouthern[36] = snapshot.val().MissouriSouthern.major37;
+          missouriSouthern[37] = snapshot.val().MissouriSouthern.major38;
+          missouriSouthern[38] = snapshot.val().MissouriSouthern.major39;
+          missouriSouthern[39] = snapshot.val().MissouriSouthern.major40;
+          missouriSouthern[40] = snapshot.val().MissouriSouthern.major41;
+          missouriSouthern[41] = snapshot.val().MissouriSouthern.check;
+
+          for(var i=0;i<41;i++){
+            if(text===missouriSouthern[i]){
+              missouriSouthern[41] = 1;
+
+              var missouriSouthern = new google.maps.LatLng(37.095957,-94.462199);
+
+              if(universityOfMissouriArray[79]!=1&&missouriSTArray[31]!=1&&harrisStowe[16]!=1&&lincoln[34]!=1){
+                var mapOptions = {
+                  center: new google.maps.LatLng(38.349139,-92.373804),
+                    zoom: 7,
+                    mapTypeId: google.maps.MapTypeId.TERRAIN
+                }
+
+                var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+              }
+
+              // To add the marker to the map, use the 'map' property
+              var marker = new google.maps.Marker({
+                animation:google.maps.Animation.DROP,
+                  position: missouriSouthern,
+                  map: map,
+                  title:"Missouri Southern State University"
+              });
+
+              var contentMissouriSouthern = '<div id="content">'+
+                    '<div id="siteNotice">'+
+                    '</div>'+
+                    '<div id="bodyContent">'+
+                    '<p><b>Missouri Southern State University</b></p>'+
+                    '<p><a href="http://www.mssu.edu/">'+
+                    'Visit Website</a> '+
+                    '</div>'+
+                    '</div>';
+
+              var infowindowmissourisouthern = new google.maps.InfoWindow();
+
+              makeInfoWindowEvent(map, infowindowmissourisouthern, contentMissouriSouthern, marker);
+            }
+          }
+
+          var missouriState = new Array();
+          missouriState[0] = snapshot.val().MissouriState.major1;
+          missouriState[1] = snapshot.val().MissouriState.major2;
+          missouriState[2] = snapshot.val().MissouriState.major3;
+          missouriState[3] = snapshot.val().MissouriState.major4;
+          missouriState[4] = snapshot.val().MissouriState.major5;
+          missouriState[5] = snapshot.val().MissouriState.major6;
+          missouriState[6] = snapshot.val().MissouriState.major7;
+          missouriState[7] = snapshot.val().MissouriState.major8;
+          missouriState[8] = snapshot.val().MissouriState.major9;
+          missouriState[9] = snapshot.val().MissouriState.major10;
+          missouriState[10] = snapshot.val().MissouriState.major11;
+          missouriState[11] = snapshot.val().MissouriState.major12;
+          missouriState[12] = snapshot.val().MissouriState.major13;
+          missouriState[13] = snapshot.val().MissouriState.major14;
+          missouriState[14] = snapshot.val().MissouriState.major15;
+          missouriState[15] = snapshot.val().MissouriState.major16;
+          missouriState[16] = snapshot.val().MissouriState.major17;
+          missouriState[17] = snapshot.val().MissouriState.major18;
+          missouriState[18] = snapshot.val().MissouriState.major19;
+          missouriState[19] = snapshot.val().MissouriState.major20;
+          missouriState[20] = snapshot.val().MissouriState.major21;
+          missouriState[21] = snapshot.val().MissouriState.major22;
+          missouriState[22] = snapshot.val().MissouriState.major23;
+          missouriState[23] = snapshot.val().MissouriState.major24;
+          missouriState[24] = snapshot.val().MissouriState.major25;
+          missouriState[25] = snapshot.val().MissouriState.major26;
+          missouriState[26] = snapshot.val().MissouriState.major27;
+          missouriState[27] = snapshot.val().MissouriState.major28;
+          missouriState[28] = snapshot.val().MissouriState.major29;
+          missouriState[29] = snapshot.val().MissouriState.major30;
+          missouriState[30] = snapshot.val().MissouriState.major31;
+          missouriState[31] = snapshot.val().MissouriState.major32;
+          missouriState[32] = snapshot.val().MissouriState.major33;
+          missouriState[33] = snapshot.val().MissouriState.major34;
+          missouriState[34] = snapshot.val().MissouriState.major35;
+          missouriState[35] = snapshot.val().MissouriState.major36;
+          missouriState[36] = snapshot.val().MissouriState.major37;
+          missouriState[37] = snapshot.val().MissouriState.major38;
+          missouriState[38] = snapshot.val().MissouriState.major39;
+          missouriState[39] = snapshot.val().MissouriState.major40;
+          missouriState[40] = snapshot.val().MissouriState.major41;
+          missouriState[41] = snapshot.val().MissouriState.major42;
+          missouriState[42] = snapshot.val().MissouriState.major43;
+          missouriState[43] = snapshot.val().MissouriState.major44;
+          missouriState[44] = snapshot.val().MissouriState.major45;
+          missouriState[45] = snapshot.val().MissouriState.major46;
+          missouriState[46] = snapshot.val().MissouriState.major47;
+          missouriState[47] = snapshot.val().MissouriState.major48;
+          missouriState[48] = snapshot.val().MissouriState.major49;
+          missouriState[49] = snapshot.val().MissouriState.major50;
+          missouriState[50] = snapshot.val().MissouriState.major51;
+          missouriState[51] = snapshot.val().MissouriState.major52;
+          missouriState[52] = snapshot.val().MissouriState.major53;
+          missouriState[53] = snapshot.val().MissouriState.major54;
+          missouriState[54] = snapshot.val().MissouriState.major55;
+          missouriState[55] = snapshot.val().MissouriState.major56;
+          missouriState[56] = snapshot.val().MissouriState.major57;
+          missouriState[57] = snapshot.val().MissouriState.major58;
+          missouriState[58] = snapshot.val().MissouriState.major59;
+          missouriState[59] = snapshot.val().MissouriState.major60;
+          missouriState[60] = snapshot.val().MissouriState.major61;
+          missouriState[61] = snapshot.val().MissouriState.major62;
+          missouriState[62] = snapshot.val().MissouriState.major63;
+          missouriState[63] = snapshot.val().MissouriState.major64;
+          missouriState[64] = snapshot.val().MissouriState.major65;
+          missouriState[65] = snapshot.val().MissouriState.major66;
+          missouriState[66] = snapshot.val().MissouriState.major67;
+          missouriState[67] = snapshot.val().MissouriState.major68;
+          missouriState[68] = snapshot.val().MissouriState.major69;
+          missouriState[69] = snapshot.val().MissouriState.major70;
+          missouriState[70] = snapshot.val().MissouriState.major71;
+          missouriState[71] = snapshot.val().MissouriState.major72;
+          missouriState[72] = snapshot.val().MissouriState.major73;
+          missouriState[73] = snapshot.val().MissouriState.major74;
+          missouriState[74] = snapshot.val().MissouriState.major75;
+          missouriState[75] = snapshot.val().MissouriState.major76;
+          missouriState[76] = snapshot.val().MissouriState.major77;
+          missouriState[77] = snapshot.val().MissouriState.major78;
+          missouriState[78] = snapshot.val().MissouriState.major79;
+          missouriState[79] = snapshot.val().MissouriState.major80;
+          missouriState[80] = snapshot.val().MissouriState.major81;
+          missouriState[81] = snapshot.val().MissouriState.major82;
+          missouriState[82] = snapshot.val().MissouriState.major83;
+          missouriState[83] = snapshot.val().MissouriState.major84;
+          missouriState[84] = snapshot.val().MissouriState.major85;
+          missouriState[85] = snapshot.val().MissouriState.major86;
+          missouriState[86] = snapshot.val().MissouriState.major87;
+          missouriState[87] = snapshot.val().MissouriState.major88;
+          missouriState[88] = snapshot.val().MissouriState.major89;
+          missouriState[89] = snapshot.val().MissouriState.major90;
+          missouriState[90] = snapshot.val().MissouriState.major91;
+          missouriState[91] = snapshot.val().MissouriState.major92;
+          missouriState[92] = snapshot.val().MissouriState.major93;
+          missouriState[93] = snapshot.val().MissouriState.major94;
+          missouriState[94] = snapshot.val().MissouriState.major95;
+          missouriState[95] = snapshot.val().MissouriState.major96;
+          missouriState[96] = snapshot.val().MissouriState.major97;
+          missouriState[97] = snapshot.val().MissouriState.check;
+
+          for(var i=0;i<97;i++){
+            if(text===missouriState[i]){
+              missouriState[97] = 1;
+
+              var missouriState = new google.maps.LatLng(37.200629,-93.281232);
+
+              if(universityOfMissouriArray[79]!=1&&missouriSTArray[31]!=1&&harrisStowe[16]!=1&&lincoln[34]!=1
+                  &&missouriState[41]!=1){
+                var mapOptions = {
+                  center: new google.maps.LatLng(38.349139,-92.373804),
+                    zoom: 7,
+                    mapTypeId: google.maps.MapTypeId.TERRAIN
+                }
+
+                var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+              }
+
+              // To add the marker to the map, use the 'map' property
+              var marker = new google.maps.Marker({
+                animation:google.maps.Animation.DROP,
+                  position: missouriState,
+                  map: map,
+                  title:"Missouri State University"
+              });
+
+              var contentMissouriState = '<div id="content">'+
+                    '<div id="siteNotice">'+
+                    '</div>'+
+                    '<div id="bodyContent">'+
+                    '<p><b>Missouri State University</b></p>'+
+                    '<p><a href="http://www.missouristate.edu/">'+
+                    'Visit Website</a> '+
+                    '</div>'+
+                    '</div>';
+
+              var infowindowmissouristate = new google.maps.InfoWindow();
+
+              makeInfoWindowEvent(map, infowindowmissouristate, contentMissouriState, marker);
+            }
+          }
+
 					function makeInfoWindowEvent(map, infowindow, contentString, marker) {
       					google.maps.event.addListener(marker, 'click', function() {
         					infowindow.setContent(contentString);
@@ -396,10 +621,11 @@
 		<form id="form-search" class="form-inline" >
 			<select id="selection" class="form-control">
         		<option>Select A Major</option>
-        		<option>Accountancy</option>
+        		<option>Accounting</option>
             <option>Aerospace Engineering</option>
             <option>Agribusiness</option>
         		<option>Agribusiness Management</option>
+            <option>Agricultural Business</option>
         		<option>Agricultural Economics</option>
         		<option>Agricultural Education</option>
         		<option>Agricultural Systems Management</option>
@@ -410,108 +636,179 @@
             <option>Architectural Engineering</option>
         		<option>Architectural Studies</option>
         		<option>Art</option>
+            <option>Art and Design</option>
+            <option>Art and Design Education</option>
             <option>Art Education</option>
+            <option>Art History</option>
         		<option>Art History and Archaeology</option>
         		<option>Athletic Training</option>
         		<option>Biochemistry</option>
         		<option>Biological Engineering</option>
         		<option>Biological Sciences</option>
             <option>Biology</option>
+            <option>Biology Education</option>
         		<option>Business Administration</option>
             <option>Business and Management Systems</option>
             <option>Business Education</option>
+            <option>Cell and Molecular Biology</option>
             <option>Ceramic Engineering</option>
         		<option>Chemical Engineering</option>
         		<option>Chemistry</option>
+            <option>Chemistry Education</option>
+            <option>Child and Family Development</option>
+            <option>Child Development Center</option>
         		<option>Civil Engineering</option>
             <option>Civil Engineering Technology</option>
         		<option>Classics</option>
         		<option>Clinical Laboratory</option>
+            <option>Clinical Laboratory Sciences</option>
         		<option>Communication</option>
         		<option>Communication Science and Disorders</option>
         		<option>Computer Engineering</option>
+            <option>Computer Information Science</option>
             <option>Computer Information Systems</option>
         		<option>Computer Science</option>
+            <option>Construction Management</option>
             <option>Criminal Justice</option>
+            <option>Criminology</option>
+            <option>Dental Hygiene</option>
+            <option>Design</option>
         		<option>Diagnostic Medical Ultrasound</option>
+            <option>Dietetics</option>
         		<option>Early Childhood Education</option>
+            <option>Earth Science Education</option>
         		<option>Economics</option>
         		<option>Educational Studies</option>
         		<option>Electrical Engineering</option>
+            <option>Electronic Arts</option>
         		<option>Elementary Education</option>
             <option>Engineering Management</option>
+            <option>Engineering Technology Entrepreneurship</option>
         		<option>English</option>
+            <option>English Education</option>
+            <option>Entertainment Management</option>
+            <option>Entrepreneurship</option>
             <option>Environmental Engineering</option>
+            <option>Environmental Plant Science</option>
             <option>Environmental Science</option>
+            <option>Exercise and Movement Science</option>
+            <option>Facility Management</option>
+            <option>Family and Consumer Sciences</option>
+            <option>Fashion Merchandising and Design</option>
         		<option>Film Studies</option>
+            <option>Finance</option>
+            <option>Finance and Economics</option>
         		<option>Fisheries and Wildlife</option>
         		<option>Food Science and Nutrition</option>
         		<option>Forestry</option>
+            <option>French</option>
+            <option>French Education</option>
+            <option>General Agriculture</option>
+            <option>General Business</option>
         		<option>General Studies</option>
         		<option>Geography</option>
             <option>Geological Engineering</option>
         		<option>Geological Sciences</option>
+            <option>Geology</option>
             <option>Geology and Geophysics</option>
+            <option>Geospatial Sciences</option>
         		<option>German</option>
+            <option>German Education</option>
+            <option>Gerontology</option>
+            <option>Global Studies</option>
             <option>Health and Physical Education</option>
             <option>Health Care Management</option>
         		<option>Health Science</option>
+            <option>Health Services</option>
         		<option>History</option>
+            <option>History Education</option>
+            <option>Hospitality and Restaurant Administration</option>
             <option>Hospitality and Tourism Management</option>
         		<option>Hospitality Management</option>
         		<option>Human Development and Family Studies</option>
         		<option>Industrial Engineering</option>
             <option>Information Science and Technology</option>
         		<option>Information Technology</option>
+            <option>Information Technology Service Management</option>
         		<option>Interdisciplinary Studies</option>
+            <option>Interior Design</option>
+            <option>International Business</option>
         		<option>International Studies</option>
         		<option>Journalism</option>
+            <option>Kinesiology</option>
             <option>Liberal Studies</option>
         		<option>Linguistics</option>
+            <option>Logistics and Supply Chain Management</option>
+            <option>Management</option>
             <option>Marketing</option>
+            <option>Mass Media</option> 
         		<option>Mathematics</option>
+            <option>Mathematics Education</option>
         		<option>Mechanical Engineering</option>
             <option>Mechanical Technology</option>
+            <option>Medical Technology</option>
             <option>Metallurgical Engineering</option>
         		<option>Middle School Education</option>
             <option>Mining Engineering</option>
             <option>Multidisciplinary Studies</option>
         		<option>Music</option>
+            <option>Musical Theatre</option>
             <option>Music Education</option>
+            <option>Natural Resources</option>
             <option>Nuclear Engineering</option>
         		<option>Nursing</option>
         		<option>Nutritional Sciences</option>
         		<option>Occupational Therapy</option>
             <option>Office Management</option>
+            <option>Paralegal</option>
+            <option>Paramedic</option>
         		<option>Parks, Recreation and Tourism</option>
         		<option>Personal Financial Planning</option>
             <option>Petroleum Engineering</option>
         		<option>Philosophy</option>
+            <option>Physical Education</option>
         		<option>Physics</option>
+            <option>Physics Education</option>
+            <option>Planning</option>
         		<option>Plant Sciences</option>
         		<option>Political Science</option>
             <option>Professional Interdisciplinary Studies</option>
+            <option>Professional Writing</option>
         		<option>Psychology</option>
+            <option>Public Relations</option>
+            <option>Radiography</option>
         		<option>Radiologic Sciences</option>
+            <option>Radiologic Technology</option>
+            <option>Recreation, Sport and Park Administration</option>
         		<option>Religious Studies</option>
         		<option>Respiratory Therapy</option>
+            <option>Risk Management and Insurance</option>
         		<option>Romance Languages</option>
         		<option>Russian</option>
             <option>Sacred Music</option>
         		<option>Science and Agricultural Journalism</option>
         		<option>Secondary Education</option>
+            <option>Social Science</option>
             <option>Social Science Education</option>
         		<option>Social Work</option>
+            <option>Socio-Political Communication</option>
         		<option>Sociology</option>
         		<option>Soil, Environmental and Atmospheric Sciences</option>
             <option>Spanish</option>
+            <option>Spanish Education</option>
         		<option>Special Education</option>
+            <option>Speech and Theatre Education</option>
         		<option>Statistics</option>
+            <option>Teacher Education</option>
             <option>Technical Communication</option>
+            <option>Technology Management</option>
         		<option>Textile and Apparel Management</option>
         		<option>Theatre</option>
+            <option>Theatre and Dance</option>
+            <option>Theatre Studies</option>
             <option>Urban Education</option>
             <option>Wellness</option>
+            <option>Wildlife Conservation and Management</option>
         	</select>
 		</form>
     <button class="btn btn-success" type="submit" onclick="Search()">Search</button>
