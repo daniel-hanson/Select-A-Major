@@ -600,6 +600,117 @@
             }
           }
 
+          var northwest = new Array();
+          northwest[0] = snapshot.val().Northwest.major1;
+          northwest[1] = snapshot.val().Northwest.major2;
+          northwest[2] = snapshot.val().Northwest.major3;
+          northwest[3] = snapshot.val().Northwest.major4;
+          northwest[4] = snapshot.val().Northwest.major5;
+          northwest[5] = snapshot.val().Northwest.major6;
+          northwest[6] = snapshot.val().Northwest.major7;
+          northwest[7] = snapshot.val().Northwest.major8;
+          northwest[8] = snapshot.val().Northwest.major9;
+          northwest[9] = snapshot.val().Northwest.major10;
+          northwest[10] = snapshot.val().Northwest.major11;
+          northwest[11] = snapshot.val().Northwest.major12;
+          northwest[12] = snapshot.val().Northwest.major13;
+          northwest[13] = snapshot.val().Northwest.major14;
+          northwest[14] = snapshot.val().Northwest.major15;
+          northwest[15] = snapshot.val().Northwest.major16;
+          northwest[16] = snapshot.val().Northwest.major17;
+          northwest[17] = snapshot.val().Northwest.major18;
+          northwest[18] = snapshot.val().Northwest.major19;
+          northwest[19] = snapshot.val().Northwest.major20;
+          northwest[20] = snapshot.val().Northwest.major21;
+          northwest[21] = snapshot.val().Northwest.major22;
+          northwest[22] = snapshot.val().Northwest.major23;
+          northwest[23] = snapshot.val().Northwest.major24;
+          northwest[24] = snapshot.val().Northwest.major25;
+          northwest[25] = snapshot.val().Northwest.major26;
+          northwest[26] = snapshot.val().Northwest.major27;
+          northwest[27] = snapshot.val().Northwest.major28;
+          northwest[28] = snapshot.val().Northwest.major29;
+          northwest[29] = snapshot.val().Northwest.major30;
+          northwest[30] = snapshot.val().Northwest.major31;
+          northwest[31] = snapshot.val().Northwest.major32;
+          northwest[32] = snapshot.val().Northwest.major33;
+          northwest[33] = snapshot.val().Northwest.major34;
+          northwest[34] = snapshot.val().Northwest.major35;
+          northwest[35] = snapshot.val().Northwest.major36;
+          northwest[36] = snapshot.val().Northwest.major37;
+          northwest[37] = snapshot.val().Northwest.major38;
+          northwest[38] = snapshot.val().Northwest.major39;
+          northwest[39] = snapshot.val().Northwest.major40;
+          northwest[40] = snapshot.val().Northwest.major41;
+          northwest[41] = snapshot.val().Northwest.major42;
+          northwest[42] = snapshot.val().Northwest.major43;
+          northwest[43] = snapshot.val().Northwest.major44;
+          northwest[44] = snapshot.val().Northwest.major45;
+          northwest[45] = snapshot.val().Northwest.major46;
+          northwest[46] = snapshot.val().Northwest.major47;
+          northwest[47] = snapshot.val().Northwest.major48;
+          northwest[48] = snapshot.val().Northwest.major49;
+          northwest[49] = snapshot.val().Northwest.major50;
+          northwest[50] = snapshot.val().Northwest.major51;
+          northwest[51] = snapshot.val().Northwest.major52;
+          northwest[52] = snapshot.val().Northwest.major53;
+          northwest[53] = snapshot.val().Northwest.major54;
+          northwest[54] = snapshot.val().Northwest.major55;
+          northwest[55] = snapshot.val().Northwest.major56;
+          northwest[56] = snapshot.val().Northwest.major57;
+          northwest[57] = snapshot.val().Northwest.major58;
+          northwest[58] = snapshot.val().Northwest.major59;
+          northwest[59] = snapshot.val().Northwest.major60;
+          northwest[60] = snapshot.val().Northwest.major61;
+          northwest[61] = snapshot.val().Northwest.major62;
+          northwest[62] = snapshot.val().Northwest.major63;
+          northwest[63] = snapshot.val().Northwest.major64;
+          northwest[64] = snapshot.val().Northwest.major65;
+          northwest[65] = snapshot.val().Northwest.major66;
+          northwest[66] = snapshot.val().Northwest.major67;
+          northwest[67] = snapshot.val().Northwest.check;
+
+          for(var i=0;i<67;i++){
+            if(text===northwest[i]){
+              northwest[67] = 1;
+
+              var northwest = new google.maps.LatLng(40.352449,-94.882253);
+
+              if(universityOfMissouriArray[79]!=1&&missouriSTArray[31]!=1&&harrisStowe[16]!=1&&lincoln[34]!=1
+                  &&missouriSouthern[41]!=1&&missouriState[97]!=1){
+                var mapOptions = {
+                  center: new google.maps.LatLng(38.349139,-92.373804),
+                    zoom: 7,
+                    mapTypeId: google.maps.MapTypeId.TERRAIN
+                }
+
+                var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+              }
+
+              // To add the marker to the map, use the 'map' property
+              var marker = new google.maps.Marker({
+                animation:google.maps.Animation.DROP,
+                  position: northwest,
+                  map: map,
+                  title:"Northwest Missouri State University"
+              });
+
+              var contentNorthwest = '<div id="content">'+
+                    '<div id="siteNotice">'+
+                    '</div>'+
+                    '<div id="bodyContent">'+
+                    '<p><b>Northwest Missouri State University</b></p>'+
+                    '<p><a href="http://www.nwmissouri.edu/">'+
+                    'Visit Website</a> '+
+                    '</div>'+
+                    '</div>';
+
+              var infowindownorthwest = new google.maps.InfoWindow();
+
+              makeInfoWindowEvent(map, infowindownorthwest, contentNorthwest, marker);
+            }
+          }
+
 					function makeInfoWindowEvent(map, infowindow, contentString, marker) {
       					google.maps.event.addListener(marker, 'click', function() {
         					infowindow.setContent(contentString);
@@ -622,14 +733,17 @@
 			<select id="selection" class="form-control">
         		<option>Select A Major</option>
         		<option>Accounting</option>
+            <option>Advertising</option>
             <option>Aerospace Engineering</option>
             <option>Agribusiness</option>
         		<option>Agribusiness Management</option>
             <option>Agricultural Business</option>
         		<option>Agricultural Economics</option>
         		<option>Agricultural Education</option>
+            <option>Agricultural Science</option>
         		<option>Agricultural Systems Management</option>
         		<option>Agriculture</option>
+            <option>Agronomy</option>
         		<option>Animal Sciences</option>
         		<option>Anthropology</option>
             <option>Applied Mathematics</option>
@@ -649,7 +763,10 @@
             <option>Biology Education</option>
         		<option>Business Administration</option>
             <option>Business and Management Systems</option>
+            <option>Business Economics</option>
             <option>Business Education</option>
+            <option>Business Management</option>
+            <option>Business Technology</option>
             <option>Cell and Molecular Biology</option>
             <option>Ceramic Engineering</option>
         		<option>Chemical Engineering</option>
@@ -682,6 +799,7 @@
         		<option>Electrical Engineering</option>
             <option>Electronic Arts</option>
         		<option>Elementary Education</option>
+            <option>Emergency and Disaster</option>
             <option>Engineering Management</option>
             <option>Engineering Technology Entrepreneurship</option>
         		<option>English</option>
@@ -700,12 +818,14 @@
             <option>Finance and Economics</option>
         		<option>Fisheries and Wildlife</option>
         		<option>Food Science and Nutrition</option>
+            <option>Foods and Nutrition</option>
         		<option>Forestry</option>
             <option>French</option>
             <option>French Education</option>
             <option>General Agriculture</option>
             <option>General Business</option>
         		<option>General Studies</option>
+            <option>Geographic Information Science</option>
         		<option>Geography</option>
             <option>Geological Engineering</option>
         		<option>Geological Sciences</option>
@@ -716,36 +836,45 @@
             <option>German Education</option>
             <option>Gerontology</option>
             <option>Global Studies</option>
+            <option>Graphic Design</option>
             <option>Health and Physical Education</option>
             <option>Health Care Management</option>
         		<option>Health Science</option>
             <option>Health Services</option>
         		<option>History</option>
             <option>History Education</option>
+            <option>Horticulture</option>
             <option>Hospitality and Restaurant Administration</option>
             <option>Hospitality and Tourism Management</option>
         		<option>Hospitality Management</option>
         		<option>Human Development and Family Studies</option>
         		<option>Industrial Engineering</option>
+            <option>Industrial Psychology</option>
             <option>Information Science and Technology</option>
         		<option>Information Technology</option>
             <option>Information Technology Service Management</option>
+            <option>Instrumental Music Education</option>
+            <option>Interactive Digital Media</option>
         		<option>Interdisciplinary Studies</option>
             <option>Interior Design</option>
             <option>International Business</option>
         		<option>International Studies</option>
         		<option>Journalism</option>
             <option>Kinesiology</option>
+            <option>Liberal Arts and Sciences</option>
             <option>Liberal Studies</option>
         		<option>Linguistics</option>
             <option>Logistics and Supply Chain Management</option>
             <option>Management</option>
+            <option>Management Information Systems</option>
+            <option>Marine Biology</option>
             <option>Marketing</option>
             <option>Mass Media</option> 
         		<option>Mathematics</option>
             <option>Mathematics Education</option>
         		<option>Mechanical Engineering</option>
             <option>Mechanical Technology</option>
+            <option>Media Studies</option>
             <option>Medical Technology</option>
             <option>Metallurgical Engineering</option>
         		<option>Middle School Education</option>
@@ -754,6 +883,7 @@
         		<option>Music</option>
             <option>Musical Theatre</option>
             <option>Music Education</option>
+            <option>Nanoscale Science</option>
             <option>Natural Resources</option>
             <option>Nuclear Engineering</option>
         		<option>Nursing</option>
@@ -775,10 +905,12 @@
             <option>Professional Interdisciplinary Studies</option>
             <option>Professional Writing</option>
         		<option>Psychology</option>
+            <option>Public Administration</option>
             <option>Public Relations</option>
             <option>Radiography</option>
         		<option>Radiologic Sciences</option>
             <option>Radiologic Technology</option>
+            <option>Recreation</option>
             <option>Recreation, Sport and Park Administration</option>
         		<option>Religious Studies</option>
         		<option>Respiratory Therapy</option>
@@ -806,9 +938,12 @@
         		<option>Theatre</option>
             <option>Theatre and Dance</option>
             <option>Theatre Studies</option>
+            <option>Unified Science Education</option>
             <option>Urban Education</option>
+            <option>Vocal Music Education</option>
             <option>Wellness</option>
             <option>Wildlife Conservation and Management</option>
+            <option>Wildlife Ecology and Conservation</option>
         	</select>
 		</form>
     <button class="btn btn-success" type="submit" onclick="Search()">Search</button>
