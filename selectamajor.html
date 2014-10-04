@@ -21,6 +21,7 @@
     	</script>
 
 		<script type="text/javascript"> 
+			// TODO Bring functions into different files for added readability and modularity
 			function initialize() {
       			var mapOptions = {
         			center: new google.maps.LatLng(38.349139,-92.373804),
@@ -37,6 +38,7 @@
 
 		<script type="text/javascript">
 
+			// TODO Bring functions into different files for added readability and modularity
 			function Search() {
 				var sel = document.getElementById("selection");
 				var value = sel.options[sel.selectedIndex].value;
@@ -45,6 +47,7 @@
 				var firebaseRef = new Firebase('https://firstfirebaseweb.firebaseIO.com');
 				firebaseRef.on('value', function(snapshot) {
 
+					// TODO Make these assignment operations more efficient
 					var universityOfMissouriArray = new Array();
 					universityOfMissouriArray[0] = snapshot.val().UniversityofMissouri.major1;
 					universityOfMissouriArray[1] = snapshot.val().UniversityofMissouri.major2;
@@ -165,6 +168,7 @@
 						}
 					}
 
+					// TODO Make these assignment operations more efficient
 					var missouriSTArray = new Array();
 					missouriSTArray[0] = snapshot.val().UniversityofMissouriST.major1;
 					missouriSTArray[1] = snapshot.val().UniversityofMissouriST.major2;
@@ -239,6 +243,7 @@
 						}
 					}
 
+		  // TODO Make these assignment operations more efficient
           var harrisStowe = new Array();
           harrisStowe[0] = snapshot.val().HarrisStowe.major1;
           harrisStowe[1] = snapshot.val().HarrisStowe.major2;
@@ -298,6 +303,7 @@
             }
           }
 
+          // TODO Make these assignment operations more efficient
           var lincoln = new Array();
           lincoln[0] = snapshot.val().Lincoln.major1;
           lincoln[1] = snapshot.val().Lincoln.major2;
@@ -374,7 +380,8 @@
               makeInfoWindowEvent(map, infowindowlincoln, contentLincoln, marker);
             }
           }
-					
+			
+		  // TODO Make these assignment operations more efficient		
           var missouriSouthern = new Array();
           missouriSouthern[0] = snapshot.val().MissouriSouthern.major1;
           missouriSouthern[1] = snapshot.val().MissouriSouthern.major2;
@@ -459,6 +466,7 @@
             }
           }
 
+          // TODO Make these assignment operations more efficient
           var missouriState = new Array();
           missouriState[0] = snapshot.val().MissouriState.major1;
           missouriState[1] = snapshot.val().MissouriState.major2;
@@ -600,6 +608,7 @@
             }
           }
 
+          // TODO Make these assignment operations more efficient
           var northwest = new Array();
           northwest[0] = snapshot.val().Northwest.major1;
           northwest[1] = snapshot.val().Northwest.major2;
@@ -711,6 +720,7 @@
             }
           }
 
+          // TODO Make these assignment operations more efficient
           var south = new Array();
           south[0] = snapshot.val().MissouriSouth.major1;
           south[1] = snapshot.val().MissouriSouth.major2;
@@ -827,6 +837,7 @@
             }
           }
 
+          			// TODO Bring functions into different files for added readability and modularity
 					function makeInfoWindowEvent(map, infowindow, contentString, marker) {
       					google.maps.event.addListener(marker, 'click', function() {
         					infowindow.setContent(contentString);
