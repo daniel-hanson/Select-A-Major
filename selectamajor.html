@@ -1,300 +1,292 @@
 <html>
-	<head>
-		<title>Select-A-Major</title>
-		<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
-		<link rel="stylesheet" href="css/bootstrap.css">
-    	<link rel="stylesheet" href="css/site.css">
+  <head>
+    <title>Select-A-Major</title>
 
-    	<!-- Map -->
-    	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <!-- Map -->
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
-		<style type="text/css">
-      		html { height: 90% }
-      		body { height: 90%; margin: 0; padding: 0 }
-      		#map-canvas { height: 100% }
-    	</style>
-  
-  		<script type="text/javascript" src="jquery-2.1.1.min.js">
-  		</script>
-    
-    	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9aGBhOrPZgE82DKXfh5qE3ipGraldw6Q&sensor=false">
-    	</script>
+    <!-- CSS Files -->
+    <link rel="stylesheet" type="text/css" href="pageStyle.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/site.css">
 
-    	<script src="initialize.js" type="text/javascript"></script>
-    	<script src="search.js" type="text/javascript"></script>
+    <!-- Javascript Files -->
+    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
+    <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9aGBhOrPZgE82DKXfh5qE3ipGraldw6Q&sensor=false"></script>
+    <script type="text/javascript" src="initialize.js"></script>
+    <script type="text/javascript" src="search.js"></script>
 
-    	<script type="text/javascript"> 
-			function initialize() {
-              var mapOptions = {
-              center: new google.maps.LatLng(38.349139,-92.373804),
-              zoom: 7,
-              mapTypeId: google.maps.MapTypeId.TERRAIN
-            };
+    <!-- Initialization Script -->
+    <script type="text/javascript"> 
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(38.349139,-92.373804),
+          zoom: 7,
+          mapTypeId: google.maps.MapTypeId.TERRAIN
+        };
 
-              var map = new google.maps.Map(document.getElementById("map-canvas"),
-              mapOptions);
-            }
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+        mapOptions);
+      }
 
-        	google.maps.event.addDomListener(window, 'load', initialize);
-		</script>
-
-	</head>
-
-	<body>
-	  
-	</body>
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
 
   <!-- Title Header -->
-	<div class="container" align="center">
-		<h3>Select-A-Major</h3>
-	</div>
+  <div class="container" align="center">
+    <h3>Select-A-Major</h3>
+  </div>
 
-	<!-- Major selections and search button -->
-	<div align="center">
-		<form id="form-search" class="form-inline" >
-			<select id="selection" class="form-control">
-        		<option>Select A Major</option>
-        		<option>Accounting</option>
-            <option>Advertising</option>
-            <option>Aerospace Engineering</option>
-            <option>Agribusiness</option>
-        		<option>Agribusiness Management</option>
-            <option>Agricultural Business</option>
-        		<option>Agricultural Economics</option>
-        		<option>Agricultural Education</option>
-            <option>Agricultural Science</option>
-        		<option>Agricultural Systems Management</option>
-        		<option>Agriculture</option>
-            <option>Agronomy</option>
-        		<option>Animal Sciences</option>
-        		<option>Anthropology</option>
-            <option>Applied Mathematics</option>
-            <option>Architectural Engineering</option>
-        		<option>Architectural Studies</option>
-        		<option>Art</option>
-            <option>Art and Design</option>
-            <option>Art and Design Education</option>
-            <option>Art Education</option>
-            <option>Art History</option>
-        		<option>Art History and Archaeology</option>
-        		<option>Athletic Training</option>
-        		<option>Biochemistry</option>
-        		<option>Biological Engineering</option>
-        		<option>Biological Sciences</option>
-            <option>Biology</option>
-            <option>Biology Education</option>
-        		<option>Business Administration</option>
-            <option>Business and Management Systems</option>
-            <option>Business Economics</option>
-            <option>Business Education</option>
-            <option>Business Management</option>
-            <option>Business Technology</option>
-            <option>Cell and Molecular Biology</option>
-            <option>Ceramic Engineering</option>
-        		<option>Chemical Engineering</option>
-        		<option>Chemistry</option>
-            <option>Chemistry Education</option>
-            <option>Child and Family Development</option>
-            <option>Child Care and Guidance</option>
-            <option>Child Development Center</option>
-            <option>Chinese</option>
-        		<option>Civil Engineering</option>
-            <option>Civil Engineering Technology</option>
-        		<option>Classics</option>
-        		<option>Clinical Laboratory</option>
-            <option>Clinical Laboratory Sciences</option>
-            <option>Commercial Photography</option>
-        		<option>Communication</option>
-            <option>Communication Disorders</option>
-        		<option>Communication Science and Disorders</option>
-            <option>Communication Studies</option>
-        		<option>Computer Engineering</option>
-            <option>Computer Information Science</option>
-            <option>Computer Information Systems</option>
-        		<option>Computer Science</option>
-            <option>Computer Technology</option>
-            <option>Construction Management</option>
-            <option>Corporate Communication</option>
-            <option>Criminal Justice</option>
-            <option>Criminology</option>
-            <option>Cybersecurity</option>
-            <option>Dance</option>
-            <option>Dental Hygiene</option>
-            <option>Design</option>
-        		<option>Diagnostic Medical Ultrasound</option>
-            <option>Dietetics</option>
-        		<option>Early Childhood Education</option>
-            <option>Earth Science Education</option>
-        		<option>Economics</option>
-        		<option>Educational Studies</option>
-        		<option>Electrical Engineering</option>
-            <option>Electronic Arts</option>
-        		<option>Elementary Education</option>
-            <option>Emergency and Disaster</option>
-            <option>Emergency Preparedness</option>
-            <option>Engineering Management</option>
-            <option>Engineering Physics</option>
-            <option>Engineering Technology</option>
-            <option>Engineering Technology Entrepreneurship</option>
-        		<option>English</option>
-            <option>English Education</option>
-            <option>Entertainment Management</option>
-            <option>Entrepreneurship</option>
-            <option>Environmental Engineering</option>
-            <option>Environmental Plant Science</option>
-            <option>Environmental Science</option>
-            <option>Exceptional Child Education</option>
-            <option>Exercise and Movement Science</option>
-            <option>Facility Management</option>
-            <option>Family and Consumer Science Education</option>
-            <option>Family and Consumer Sciences</option>
-            <option>Fashion Merchandising and Design</option>
-        		<option>Film Studies</option>
-            <option>Finance</option>
-            <option>Finance and Economics</option>
-        		<option>Fisheries and Wildlife</option>
-        		<option>Food Science and Nutrition</option>
-            <option>Foods and Nutrition</option>
-        		<option>Forestry</option>
-            <option>French</option>
-            <option>French Education</option>
-            <option>General Agriculture</option>
-            <option>General Business</option>
-        		<option>General Studies</option>
-            <option>Geographic Information Science</option>
-        		<option>Geography</option>
-            <option>Geological Engineering</option>
-        		<option>Geological Sciences</option>
-            <option>Geology</option>
-            <option>Geology and Geophysics</option>
-            <option>Geospatial Sciences</option>
-        		<option>German</option>
-            <option>German Education</option>
-            <option>Gerontology</option>
-            <option>Global Cultures and Languages</option>
-            <option>Global Studies</option>
-            <option>Graphic Design</option>
-            <option>Health and Physical Education</option>
-            <option>Health Care Management</option>
-            <option>Health Management</option>
-        		<option>Health Science</option>
-            <option>Health Services</option>
-            <option>Historic Preservation</option>
-        		<option>History</option>
-            <option>History Education</option>
-            <option>Horticulture</option>
-            <option>Hospitality and Restaurant Administration</option>
-            <option>Hospitality and Tourism Management</option>
-        		<option>Hospitality Management</option>
-        		<option>Human Development and Family Studies</option>
-            <option>Human Environmental Studies</option>
-        		<option>Industrial Engineering</option>
-            <option>Industrial Psychology</option>
-            <option>Information Science and Technology</option>
-        		<option>Information Technology</option>
-            <option>Information Technology Service Management</option>
-            <option>Instrumental Music Education</option>
-            <option>Interactive Digital Media</option>
-        		<option>Interdisciplinary Studies</option>
-            <option>Interior Design</option>
-            <option>International Business</option>
-        		<option>International Studies</option>
-            <option>Japanese</option>
-        		<option>Journalism</option>
-            <option>Kinesiology</option>
-            <option>Liberal Arts and Sciences</option>
-            <option>Liberal Studies</option>
-        		<option>Linguistics</option>
-            <option>Logistics and Supply Chain Management</option>
-            <option>Management</option>
-            <option>Management Information Systems</option>
-            <option>Marine Biology</option>
-            <option>Marketing</option>
-            <option>Mass Communication</option>
-            <option>Mass Media</option> 
-        		<option>Mathematics</option>
-            <option>Mathematics Education</option>
-        		<option>Mechanical Engineering</option>
-            <option>Mechanical Technology</option>
-            <option>Media Studies</option>
-            <option>Medical Technology</option>
-            <option>Metallurgical Engineering</option>
-        		<option>Middle School Education</option>
-            <option>Mining Engineering</option>
-            <option>Multidisciplinary Studies</option>
-        		<option>Music</option>
-            <option>Musical Theatre</option>
-            <option>Music Education</option>
-            <option>Nanoscale Science</option>
-            <option>Natural Resources</option>
-            <option>Nuclear Engineering</option>
-        		<option>Nursing</option>
-        		<option>Nutritional Sciences</option>
-        		<option>Occupational Therapy</option>
-            <option>Office Management</option>
-            <option>Paralegal</option>
-            <option>Paramedic</option>
-        		<option>Parks, Recreation and Tourism</option>
-        		<option>Personal Financial Planning</option>
-            <option>Petroleum Engineering</option>
-        		<option>Philosophy</option>
-            <option>Physical Education</option>
-        		<option>Physics</option>
-            <option>Physics Education</option>
-            <option>Planning</option>
-        		<option>Plant Sciences</option>
-        		<option>Political Science</option>
-            <option>Professional Interdisciplinary Studies</option>
-            <option>Professional Writing</option>
-        		<option>Psychology</option>
-            <option>Public Administration</option>
-            <option>Public Relations</option>
-            <option>Radiography</option>
-        		<option>Radiologic Sciences</option>
-            <option>Radiologic Technology</option>
-            <option>Recreation</option>
-            <option>Recreation, Sport and Park Administration</option>
-        		<option>Religious Studies</option>
-        		<option>Respiratory Therapy</option>
-            <option>Risk Management and Insurance</option>
-        		<option>Romance Languages</option>
-        		<option>Russian</option>
-            <option>Sacred Music</option>
-        		<option>Science and Agricultural Journalism</option>
-        		<option>Secondary Education</option>
-            <option>Social Science</option>
-            <option>Social Science Education</option>
-            <option>Social Studies</option>
-        		<option>Social Work</option>
-            <option>Socio-Political Communication</option>
-        		<option>Sociology</option>
-        		<option>Soil, Environmental and Atmospheric Sciences</option>
-            <option>Spanish</option>
-            <option>Spanish Education</option>
-        		<option>Special Education</option>
-            <option>Speech and Theatre Education</option>
-            <option>Sport Management</option>
-        		<option>Statistics</option>
-            <option>Teacher Education</option>
-            <option>Technical Communication</option>
-            <option>Technology Management</option>
-        		<option>Textile and Apparel Management</option>
-        		<option>Theatre</option>
-            <option>Theatre and Dance</option>
-            <option>Theatre Studies</option>
-            <option>Unified Science Education</option>
-            <option>Urban Education</option>
-            <option>Vocal Music Education</option>
-            <option>Wellness</option>
-            <option>Wildlife Conservation and Management</option>
-            <option>Wildlife Ecology and Conservation</option>
-        	</select>
-		</form>
+  <!-- Major selections and search button -->
+  <div align="center">
+    <form id="form-search" class="form-inline" >
+      <select id="selection" class="form-control">
+        <option>Select A Major</option>
+        <option>Accounting</option>
+        <option>Advertising</option>
+        <option>Aerospace Engineering</option>
+        <option>Agribusiness</option>
+        <option>Agribusiness Management</option>
+        <option>Agricultural Business</option>
+        <option>Agricultural Economics</option>
+        <option>Agricultural Education</option>
+        <option>Agricultural Science</option>
+        <option>Agricultural Systems Management</option>
+        <option>Agriculture</option>
+        <option>Agronomy</option>
+        <option>Animal Sciences</option>
+        <option>Anthropology</option>
+        <option>Applied Mathematics</option>
+        <option>Architectural Engineering</option>
+        <option>Architectural Studies</option>
+        <option>Art</option>
+        <option>Art and Design</option>
+        <option>Art and Design Education</option>
+        <option>Art Education</option>
+        <option>Art History</option>
+        <option>Art History and Archaeology</option>
+        <option>Athletic Training</option>
+        <option>Biochemistry</option>
+        <option>Biological Engineering</option>
+        <option>Biological Sciences</option>
+        <option>Biology</option>
+        <option>Biology Education</option>
+        <option>Business Administration</option>
+        <option>Business and Management Systems</option>
+        <option>Business Economics</option>
+        <option>Business Education</option>
+        <option>Business Management</option>
+        <option>Business Technology</option>
+        <option>Cell and Molecular Biology</option>
+        <option>Ceramic Engineering</option>
+        <option>Chemical Engineering</option>
+        <option>Chemistry</option>
+        <option>Chemistry Education</option>
+        <option>Child and Family Development</option>
+        <option>Child Care and Guidance</option>
+        <option>Child Development Center</option>
+        <option>Chinese</option>
+        <option>Civil Engineering</option>
+        <option>Civil Engineering Technology</option>
+        <option>Classics</option>
+        <option>Clinical Laboratory</option>
+        <option>Clinical Laboratory Sciences</option>
+        <option>Commercial Photography</option>
+        <option>Communication</option>
+        <option>Communication Disorders</option>
+        <option>Communication Science and Disorders</option>
+        <option>Communication Studies</option>
+        <option>Computer Engineering</option>
+        <option>Computer Information Science</option>
+        <option>Computer Information Systems</option>
+        <option>Computer Science</option>
+        <option>Computer Technology</option>
+        <option>Construction Management</option>
+        <option>Corporate Communication</option>
+        <option>Criminal Justice</option>
+        <option>Criminology</option>
+        <option>Cybersecurity</option>
+        <option>Dance</option>
+        <option>Dental Hygiene</option>
+        <option>Design</option>
+        <option>Diagnostic Medical Ultrasound</option>
+        <option>Dietetics</option>
+        <option>Early Childhood Education</option>
+        <option>Earth Science Education</option>
+        <option>Economics</option>
+        <option>Educational Studies</option>
+        <option>Electrical Engineering</option>
+        <option>Electronic Arts</option>
+        <option>Elementary Education</option>
+        <option>Emergency and Disaster</option>
+        <option>Emergency Preparedness</option>
+        <option>Engineering Management</option>
+        <option>Engineering Physics</option>
+        <option>Engineering Technology</option>
+        <option>Engineering Technology Entrepreneurship</option>
+        <option>English</option>
+        <option>English Education</option>
+        <option>Entertainment Management</option>
+        <option>Entrepreneurship</option>
+        <option>Environmental Engineering</option>
+        <option>Environmental Plant Science</option>
+        <option>Environmental Science</option>
+        <option>Exceptional Child Education</option>
+        <option>Exercise and Movement Science</option>
+        <option>Facility Management</option>
+        <option>Family and Consumer Science Education</option>
+        <option>Family and Consumer Sciences</option>
+        <option>Fashion Merchandising and Design</option>
+        <option>Film Studies</option>
+        <option>Finance</option>
+        <option>Finance and Economics</option>
+        <option>Fisheries and Wildlife</option>
+        <option>Food Science and Nutrition</option>
+        <option>Foods and Nutrition</option>
+        <option>Forestry</option>
+        <option>French</option>
+        <option>French Education</option>
+        <option>General Agriculture</option>
+        <option>General Business</option>
+        <option>General Studies</option>
+        <option>Geographic Information Science</option>
+        <option>Geography</option>
+        <option>Geological Engineering</option>
+        <option>Geological Sciences</option>
+        <option>Geology</option>
+        <option>Geology and Geophysics</option>
+        <option>Geospatial Sciences</option>
+        <option>German</option>
+        <option>German Education</option>
+        <option>Gerontology</option>
+        <option>Global Cultures and Languages</option>
+        <option>Global Studies</option>
+        <option>Graphic Design</option>
+        <option>Health and Physical Education</option>
+        <option>Health Care Management</option>
+        <option>Health Management</option>
+        <option>Health Science</option>
+        <option>Health Services</option>
+        <option>Historic Preservation</option>
+        <option>History</option>
+        <option>History Education</option>
+        <option>Horticulture</option>
+        <option>Hospitality and Restaurant Administration</option>
+        <option>Hospitality and Tourism Management</option>
+        <option>Hospitality Management</option>
+        <option>Human Development and Family Studies</option>
+        <option>Human Environmental Studies</option>
+        <option>Industrial Engineering</option>
+        <option>Industrial Psychology</option>
+        <option>Information Science and Technology</option>
+        <option>Information Technology</option>
+        <option>Information Technology Service Management</option>
+        <option>Instrumental Music Education</option>
+        <option>Interactive Digital Media</option>
+        <option>Interdisciplinary Studies</option>
+        <option>Interior Design</option>
+        <option>International Business</option>
+        <option>International Studies</option>
+        <option>Japanese</option>
+        <option>Journalism</option>
+        <option>Kinesiology</option>
+        <option>Liberal Arts and Sciences</option>
+        <option>Liberal Studies</option>
+        <option>Linguistics</option>
+        <option>Logistics and Supply Chain Management</option>
+        <option>Management</option>
+        <option>Management Information Systems</option>
+        <option>Marine Biology</option>
+        <option>Marketing</option>
+        <option>Mass Communication</option>
+        <option>Mass Media</option> 
+        <option>Mathematics</option>
+        <option>Mathematics Education</option>
+        <option>Mechanical Engineering</option>
+        <option>Mechanical Technology</option>
+        <option>Media Studies</option>
+        <option>Medical Technology</option>
+        <option>Metallurgical Engineering</option>
+        <option>Middle School Education</option>
+        <option>Mining Engineering</option>
+        <option>Multidisciplinary Studies</option>
+        <option>Music</option>
+        <option>Musical Theatre</option>
+        <option>Music Education</option>
+        <option>Nanoscale Science</option>
+        <option>Natural Resources</option>
+        <option>Nuclear Engineering</option>
+        <option>Nursing</option>
+        <option>Nutritional Sciences</option>
+        <option>Occupational Therapy</option>
+        <option>Office Management</option>
+        <option>Paralegal</option>
+        <option>Paramedic</option>
+        <option>Parks, Recreation and Tourism</option>
+        <option>Personal Financial Planning</option>
+        <option>Petroleum Engineering</option>
+        <option>Philosophy</option>
+        <option>Physical Education</option>
+        <option>Physics</option>
+        <option>Physics Education</option>
+        <option>Planning</option>
+        <option>Plant Sciences</option>
+        <option>Political Science</option>
+        <option>Professional Interdisciplinary Studies</option>
+        <option>Professional Writing</option>
+        <option>Psychology</option>
+        <option>Public Administration</option>
+        <option>Public Relations</option>
+        <option>Radiography</option>
+        <option>Radiologic Sciences</option>
+        <option>Radiologic Technology</option>
+        <option>Recreation</option>
+        <option>Recreation, Sport and Park Administration</option>
+        <option>Religious Studies</option>
+        <option>Respiratory Therapy</option>
+        <option>Risk Management and Insurance</option>
+        <option>Romance Languages</option>
+        <option>Russian</option>
+        <option>Sacred Music</option>
+        <option>Science and Agricultural Journalism</option>
+        <option>Secondary Education</option>
+        <option>Social Science</option>
+        <option>Social Science Education</option>
+        <option>Social Studies</option>
+        <option>Social Work</option>
+        <option>Socio-Political Communication</option>
+        <option>Sociology</option>
+        <option>Soil, Environmental and Atmospheric Sciences</option>
+        <option>Spanish</option>
+        <option>Spanish Education</option>
+        <option>Special Education</option>
+        <option>Speech and Theatre Education</option>
+        <option>Sport Management</option>
+        <option>Statistics</option>
+        <option>Teacher Education</option>
+        <option>Technical Communication</option>
+        <option>Technology Management</option>
+        <option>Textile and Apparel Management</option>
+        <option>Theatre</option>
+        <option>Theatre and Dance</option>
+        <option>Theatre Studies</option>
+        <option>Unified Science Education</option>
+        <option>Urban Education</option>
+        <option>Vocal Music Education</option>
+        <option>Wellness</option>
+        <option>Wildlife Conservation and Management</option>
+        <option>Wildlife Ecology and Conservation</option>
+      </select>
+    </form>
+
+    <!-- Search Button -->
     <button class="btn btn-success" type="submit" onclick="Search()">Search</button>
-	</div>
+  </div>
 
   <!-- Map Canvas -->
-	<div id="map-canvas" style="height:100%"></div>
-    
-  	<script type="text/javascript" src="js/bootstrap.js"></script>
+  <div id="map-canvas" style="height:100%"></div>
+
+  <script type="text/javascript" src="js/bootstrap.js"></script>
 </html>
