@@ -1,131 +1,131 @@
 function Search() {
-				var sel = document.getElementById("selection");
-				var value = sel.options[sel.selectedIndex].value;
-				var text = sel.options[sel.selectedIndex].text;
+  var sel = document.getElementById("selection");
+  var value = sel.options[sel.selectedIndex].value;
+	var text = sel.options[sel.selectedIndex].text;
 
-				var firebaseRef = new Firebase('https://firstfirebaseweb.firebaseIO.com');
-				firebaseRef.on('value', function(snapshot) {
+	var firebaseRef = new Firebase('https://firstfirebaseweb.firebaseIO.com');
+	firebaseRef.on('value', function(snapshot) {
 
-					// TODO Make these assignment operations more efficient
-					var universityOfMissouriArray = new Array();
-					universityOfMissouriArray[0] = snapshot.val().UniversityofMissouri.major1;
-					universityOfMissouriArray[1] = snapshot.val().UniversityofMissouri.major2;
-					universityOfMissouriArray[2] = snapshot.val().UniversityofMissouri.major3;
-          universityOfMissouriArray[3] = snapshot.val().UniversityofMissouri.major4;
-          universityOfMissouriArray[4] = snapshot.val().UniversityofMissouri.major5;
-          universityOfMissouriArray[5] = snapshot.val().UniversityofMissouri.major6;
-          universityOfMissouriArray[6] = snapshot.val().UniversityofMissouri.major7;
-          universityOfMissouriArray[7] = snapshot.val().UniversityofMissouri.major8;
-          universityOfMissouriArray[8] = snapshot.val().UniversityofMissouri.major9;
-          universityOfMissouriArray[9] = snapshot.val().UniversityofMissouri.major10;
-          universityOfMissouriArray[10] = snapshot.val().UniversityofMissouri.major11;
-          universityOfMissouriArray[11] = snapshot.val().UniversityofMissouri.major12;
-          universityOfMissouriArray[12] = snapshot.val().UniversityofMissouri.major13;
-          universityOfMissouriArray[13] = snapshot.val().UniversityofMissouri.major14;
-          universityOfMissouriArray[14] = snapshot.val().UniversityofMissouri.major15;
-          universityOfMissouriArray[15] = snapshot.val().UniversityofMissouri.major16;
-          universityOfMissouriArray[16] = snapshot.val().UniversityofMissouri.major17;
-          universityOfMissouriArray[17] = snapshot.val().UniversityofMissouri.major18;
-          universityOfMissouriArray[18] = snapshot.val().UniversityofMissouri.major19;
-          universityOfMissouriArray[19] = snapshot.val().UniversityofMissouri.major20;
-          universityOfMissouriArray[20] = snapshot.val().UniversityofMissouri.major21;
-          universityOfMissouriArray[21] = snapshot.val().UniversityofMissouri.major22;
-          universityOfMissouriArray[22] = snapshot.val().UniversityofMissouri.major23;
-          universityOfMissouriArray[23] = snapshot.val().UniversityofMissouri.major24;
-          universityOfMissouriArray[24] = snapshot.val().UniversityofMissouri.major25;
-          universityOfMissouriArray[25] = snapshot.val().UniversityofMissouri.major26;
-          universityOfMissouriArray[26] = snapshot.val().UniversityofMissouri.major27;
-          universityOfMissouriArray[27] = snapshot.val().UniversityofMissouri.major28;
-          universityOfMissouriArray[28] = snapshot.val().UniversityofMissouri.major29;
-          universityOfMissouriArray[29] = snapshot.val().UniversityofMissouri.major30;
-          universityOfMissouriArray[30] = snapshot.val().UniversityofMissouri.major31;
-          universityOfMissouriArray[31] = snapshot.val().UniversityofMissouri.major32;
-          universityOfMissouriArray[32] = snapshot.val().UniversityofMissouri.major33;
-          universityOfMissouriArray[33] = snapshot.val().UniversityofMissouri.major34;
-          universityOfMissouriArray[34] = snapshot.val().UniversityofMissouri.major35;
-          universityOfMissouriArray[35] = snapshot.val().UniversityofMissouri.major36;
-          universityOfMissouriArray[36] = snapshot.val().UniversityofMissouri.major37;
-          universityOfMissouriArray[37] = snapshot.val().UniversityofMissouri.major38;
-          universityOfMissouriArray[38] = snapshot.val().UniversityofMissouri.major39;
-          universityOfMissouriArray[39] = snapshot.val().UniversityofMissouri.major40;
-          universityOfMissouriArray[40] = snapshot.val().UniversityofMissouri.major41;
-          universityOfMissouriArray[41] = snapshot.val().UniversityofMissouri.major42;
-          universityOfMissouriArray[42] = snapshot.val().UniversityofMissouri.major43;
-          universityOfMissouriArray[43] = snapshot.val().UniversityofMissouri.major44;
-          universityOfMissouriArray[44] = snapshot.val().UniversityofMissouri.major45;
-          universityOfMissouriArray[45] = snapshot.val().UniversityofMissouri.major46;
-          universityOfMissouriArray[46] = snapshot.val().UniversityofMissouri.major47;
-          universityOfMissouriArray[47] = snapshot.val().UniversityofMissouri.major48;
-          universityOfMissouriArray[48] = snapshot.val().UniversityofMissouri.major49;
-          universityOfMissouriArray[49] = snapshot.val().UniversityofMissouri.major50;
-          universityOfMissouriArray[50] = snapshot.val().UniversityofMissouri.major51;
-          universityOfMissouriArray[51] = snapshot.val().UniversityofMissouri.major52;
-          universityOfMissouriArray[52] = snapshot.val().UniversityofMissouri.major53;
-          universityOfMissouriArray[53] = snapshot.val().UniversityofMissouri.major54;
-          universityOfMissouriArray[54] = snapshot.val().UniversityofMissouri.major55;
-          universityOfMissouriArray[55] = snapshot.val().UniversityofMissouri.major56;
-          universityOfMissouriArray[56] = snapshot.val().UniversityofMissouri.major57;
-          universityOfMissouriArray[57] = snapshot.val().UniversityofMissouri.major58;
-          universityOfMissouriArray[58] = snapshot.val().UniversityofMissouri.major59;
-          universityOfMissouriArray[59] = snapshot.val().UniversityofMissouri.major60;
-          universityOfMissouriArray[60] = snapshot.val().UniversityofMissouri.major61;
-          universityOfMissouriArray[61] = snapshot.val().UniversityofMissouri.major62;
-          universityOfMissouriArray[62] = snapshot.val().UniversityofMissouri.major63;
-          universityOfMissouriArray[63] = snapshot.val().UniversityofMissouri.major64;
-          universityOfMissouriArray[64] = snapshot.val().UniversityofMissouri.major65;
-          universityOfMissouriArray[65] = snapshot.val().UniversityofMissouri.major66;
-          universityOfMissouriArray[66] = snapshot.val().UniversityofMissouri.major67;
-          universityOfMissouriArray[67] = snapshot.val().UniversityofMissouri.major68;
-          universityOfMissouriArray[68] = snapshot.val().UniversityofMissouri.major69;
-          universityOfMissouriArray[69] = snapshot.val().UniversityofMissouri.major70;
-          universityOfMissouriArray[70] = snapshot.val().UniversityofMissouri.major71;
-          universityOfMissouriArray[71] = snapshot.val().UniversityofMissouri.major72;
-          universityOfMissouriArray[72] = snapshot.val().UniversityofMissouri.major73;
-          universityOfMissouriArray[73] = snapshot.val().UniversityofMissouri.major74;
-          universityOfMissouriArray[74] = snapshot.val().UniversityofMissouri.major75;
-          universityOfMissouriArray[75] = snapshot.val().UniversityofMissouri.major76;
-          universityOfMissouriArray[76] = snapshot.val().UniversityofMissouri.major77;
-          universityOfMissouriArray[77] = snapshot.val().UniversityofMissouri.major78;
-          universityOfMissouriArray[78] = snapshot.val().UniversityofMissouri.major79;
-          universityOfMissouriArray[79] = snapshot.val().UniversityofMissouri.check;
+	// TODO Make these assignment operations more efficient
+	var universityOfMissouriArray = new Array();
+	universityOfMissouriArray[0] = snapshot.val().UniversityofMissouri.major1;
+	universityOfMissouriArray[1] = snapshot.val().UniversityofMissouri.major2;
+	universityOfMissouriArray[2] = snapshot.val().UniversityofMissouri.major3;
+    universityOfMissouriArray[3] = snapshot.val().UniversityofMissouri.major4;
+    universityOfMissouriArray[4] = snapshot.val().UniversityofMissouri.major5;
+    universityOfMissouriArray[5] = snapshot.val().UniversityofMissouri.major6;
+    universityOfMissouriArray[6] = snapshot.val().UniversityofMissouri.major7;
+    universityOfMissouriArray[7] = snapshot.val().UniversityofMissouri.major8;
+    universityOfMissouriArray[8] = snapshot.val().UniversityofMissouri.major9;
+    universityOfMissouriArray[9] = snapshot.val().UniversityofMissouri.major10;
+    universityOfMissouriArray[10] = snapshot.val().UniversityofMissouri.major11;
+    universityOfMissouriArray[11] = snapshot.val().UniversityofMissouri.major12;
+    universityOfMissouriArray[12] = snapshot.val().UniversityofMissouri.major13;
+    universityOfMissouriArray[13] = snapshot.val().UniversityofMissouri.major14;
+    universityOfMissouriArray[14] = snapshot.val().UniversityofMissouri.major15;
+    universityOfMissouriArray[15] = snapshot.val().UniversityofMissouri.major16;
+    universityOfMissouriArray[16] = snapshot.val().UniversityofMissouri.major17;
+    universityOfMissouriArray[17] = snapshot.val().UniversityofMissouri.major18;
+    universityOfMissouriArray[18] = snapshot.val().UniversityofMissouri.major19;
+    universityOfMissouriArray[19] = snapshot.val().UniversityofMissouri.major20;
+    universityOfMissouriArray[20] = snapshot.val().UniversityofMissouri.major21;
+    universityOfMissouriArray[21] = snapshot.val().UniversityofMissouri.major22;
+    universityOfMissouriArray[22] = snapshot.val().UniversityofMissouri.major23;
+    universityOfMissouriArray[23] = snapshot.val().UniversityofMissouri.major24;
+    universityOfMissouriArray[24] = snapshot.val().UniversityofMissouri.major25;
+    universityOfMissouriArray[25] = snapshot.val().UniversityofMissouri.major26;
+    universityOfMissouriArray[26] = snapshot.val().UniversityofMissouri.major27;
+    universityOfMissouriArray[27] = snapshot.val().UniversityofMissouri.major28;
+    universityOfMissouriArray[28] = snapshot.val().UniversityofMissouri.major29;
+    universityOfMissouriArray[29] = snapshot.val().UniversityofMissouri.major30;
+    universityOfMissouriArray[30] = snapshot.val().UniversityofMissouri.major31;
+    universityOfMissouriArray[31] = snapshot.val().UniversityofMissouri.major32;
+    universityOfMissouriArray[32] = snapshot.val().UniversityofMissouri.major33;
+    universityOfMissouriArray[33] = snapshot.val().UniversityofMissouri.major34;
+    universityOfMissouriArray[34] = snapshot.val().UniversityofMissouri.major35;
+    universityOfMissouriArray[35] = snapshot.val().UniversityofMissouri.major36;
+    universityOfMissouriArray[36] = snapshot.val().UniversityofMissouri.major37;
+    universityOfMissouriArray[37] = snapshot.val().UniversityofMissouri.major38;
+    universityOfMissouriArray[38] = snapshot.val().UniversityofMissouri.major39;
+    universityOfMissouriArray[39] = snapshot.val().UniversityofMissouri.major40;
+    universityOfMissouriArray[40] = snapshot.val().UniversityofMissouri.major41;
+    universityOfMissouriArray[41] = snapshot.val().UniversityofMissouri.major42;
+    universityOfMissouriArray[42] = snapshot.val().UniversityofMissouri.major43;
+    universityOfMissouriArray[43] = snapshot.val().UniversityofMissouri.major44;
+    universityOfMissouriArray[44] = snapshot.val().UniversityofMissouri.major45;
+    universityOfMissouriArray[45] = snapshot.val().UniversityofMissouri.major46;
+    universityOfMissouriArray[46] = snapshot.val().UniversityofMissouri.major47;
+    universityOfMissouriArray[47] = snapshot.val().UniversityofMissouri.major48;
+    universityOfMissouriArray[48] = snapshot.val().UniversityofMissouri.major49;
+    universityOfMissouriArray[49] = snapshot.val().UniversityofMissouri.major50;
+    universityOfMissouriArray[50] = snapshot.val().UniversityofMissouri.major51;
+    universityOfMissouriArray[51] = snapshot.val().UniversityofMissouri.major52;
+    universityOfMissouriArray[52] = snapshot.val().UniversityofMissouri.major53;
+    universityOfMissouriArray[53] = snapshot.val().UniversityofMissouri.major54;
+    universityOfMissouriArray[54] = snapshot.val().UniversityofMissouri.major55;
+    universityOfMissouriArray[55] = snapshot.val().UniversityofMissouri.major56;
+    universityOfMissouriArray[56] = snapshot.val().UniversityofMissouri.major57;
+    universityOfMissouriArray[57] = snapshot.val().UniversityofMissouri.major58;
+    universityOfMissouriArray[58] = snapshot.val().UniversityofMissouri.major59;
+    universityOfMissouriArray[59] = snapshot.val().UniversityofMissouri.major60;
+    universityOfMissouriArray[60] = snapshot.val().UniversityofMissouri.major61;
+    universityOfMissouriArray[61] = snapshot.val().UniversityofMissouri.major62;
+    universityOfMissouriArray[62] = snapshot.val().UniversityofMissouri.major63;
+    universityOfMissouriArray[63] = snapshot.val().UniversityofMissouri.major64;
+    universityOfMissouriArray[64] = snapshot.val().UniversityofMissouri.major65;
+    universityOfMissouriArray[65] = snapshot.val().UniversityofMissouri.major66;
+    universityOfMissouriArray[66] = snapshot.val().UniversityofMissouri.major67;
+    universityOfMissouriArray[67] = snapshot.val().UniversityofMissouri.major68;
+    universityOfMissouriArray[68] = snapshot.val().UniversityofMissouri.major69;
+    universityOfMissouriArray[69] = snapshot.val().UniversityofMissouri.major70;
+    universityOfMissouriArray[70] = snapshot.val().UniversityofMissouri.major71;
+    universityOfMissouriArray[71] = snapshot.val().UniversityofMissouri.major72;
+    universityOfMissouriArray[72] = snapshot.val().UniversityofMissouri.major73;
+    universityOfMissouriArray[73] = snapshot.val().UniversityofMissouri.major74;
+    universityOfMissouriArray[74] = snapshot.val().UniversityofMissouri.major75;
+    universityOfMissouriArray[75] = snapshot.val().UniversityofMissouri.major76;
+    universityOfMissouriArray[76] = snapshot.val().UniversityofMissouri.major77;
+    universityOfMissouriArray[77] = snapshot.val().UniversityofMissouri.major78;
+    universityOfMissouriArray[78] = snapshot.val().UniversityofMissouri.major79;
+    universityOfMissouriArray[79] = snapshot.val().UniversityofMissouri.check;
 
-					for(var j=0;j<79;j++){
-						if(text===universityOfMissouriArray[j]){
-              universityOfMissouriArray[79] = 1;
+	for(var j=0;j<79;j++){
+	  if(text===universityOfMissouriArray[j]){
+        universityOfMissouriArray[79] = 1;
 
-              var universityOfMissouri = new google.maps.LatLng(38.933139,-92.373804);
+        var universityOfMissouri = new google.maps.LatLng(38.933139,-92.373804);
 
-							var mapOptions = {
-								center: new google.maps.LatLng(38.349139,-92.373804),
-  								zoom: 7,
-  								mapTypeId: google.maps.MapTypeId.TERRAIN
-							}
+		var mapOptions = {
+		  center: new google.maps.LatLng(38.349139,-92.373804),
+		  zoom: 7,
+		  mapTypeId: google.maps.MapTypeId.TERRAIN
+		}
 
-							var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+		var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-							// To add the marker to the map, use the 'map' property
-							var marker = new google.maps.Marker({
-								animation:google.maps.Animation.DROP,
-    							position: universityOfMissouri,
-    							map: map,
-    							title:"University of Missouri"
-							});
+		// To add the marker to the map, use the 'map' property
+		var marker = new google.maps.Marker({
+		  animation:google.maps.Animation.DROP,
+		  position: universityOfMissouri,
+		  map: map,
+		  title:"University of Missouri"
+		});
 
-							var contentUniversityofMissouri = '<div id="content">'+
-      							'<div id="siteNotice">'+
-      							'</div>'+
-      							'<div id="bodyContent">'+
-      							'<p><b>University of Missouri - Columbia</b></p>'+
-      							'<p><a href="http://missouri.edu/">'+
-      							'Visit Website</a> '+
-      							'</div>'+
-      							'</div>';
+		var contentUniversityofMissouri = '<div id="content">'+
+		    '<div id="siteNotice">'+
+			'</div>'+
+			'<div id="bodyContent">'+
+			'<p><b>University of Missouri - Columbia</b></p>'+
+			'<p><a href="http://missouri.edu/">'+
+			'Visit Website</a> '+
+			'</div>'+
+			'</div>';
 
-      						var infowindowuniversityofmissouri = new google.maps.InfoWindow();
+	    var infowindowuniversityofmissouri = new google.maps.InfoWindow();
 
-							makeInfoWindowEvent(map, infowindowuniversityofmissouri, contentUniversityofMissouri, marker);
-						}
-					}
+	    makeInfoWindowEvent(map, infowindowuniversityofmissouri, contentUniversityofMissouri, marker);
+	  }
+	}
 
 					// TODO Make these assignment operations more efficient
 					var missouriSTArray = new Array();
