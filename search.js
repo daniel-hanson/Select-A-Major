@@ -5,12 +5,11 @@ function Search() {
 
 	var firebaseRef = new Firebase('https://firstfirebaseweb.firebaseIO.com');
 	firebaseRef.on('value', function(snapshot) {
-
-	// TODO Make these assignment operations more efficient
-	var universityOfMissouriArray = new Array();
-	universityOfMissouriArray[0] = snapshot.val().UniversityofMissouri.major1;
-	universityOfMissouriArray[1] = snapshot.val().UniversityofMissouri.major2;
-	universityOfMissouriArray[2] = snapshot.val().UniversityofMissouri.major3;
+	  // TODO Make these assignment operations more efficient
+	  var universityOfMissouriArray = new Array();
+	  universityOfMissouriArray[0] = snapshot.val().UniversityofMissouri.major1;
+	  universityOfMissouriArray[1] = snapshot.val().UniversityofMissouri.major2;
+	  universityOfMissouriArray[2] = snapshot.val().UniversityofMissouri.major3;
     universityOfMissouriArray[3] = snapshot.val().UniversityofMissouri.major4;
     universityOfMissouriArray[4] = snapshot.val().UniversityofMissouri.major5;
     universityOfMissouriArray[5] = snapshot.val().UniversityofMissouri.major6;
@@ -89,43 +88,43 @@ function Search() {
     universityOfMissouriArray[78] = snapshot.val().UniversityofMissouri.major79;
     universityOfMissouriArray[79] = snapshot.val().UniversityofMissouri.check;
 
-	for(var j=0;j<79;j++){
-	  if(text===universityOfMissouriArray[j]){
+	  for(var j=0;j<79;j++){
+	    if(text===universityOfMissouriArray[j]){
         universityOfMissouriArray[79] = 1;
 
         var universityOfMissouri = new google.maps.LatLng(38.933139,-92.373804);
 
-		var mapOptions = {
-		  center: new google.maps.LatLng(38.349139,-92.373804),
-		  zoom: 7,
-		  mapTypeId: google.maps.MapTypeId.TERRAIN
-		}
+		    var mapOptions = {
+		      center: new google.maps.LatLng(38.349139,-92.373804),
+		      zoom: 7,
+		      mapTypeId: google.maps.MapTypeId.TERRAIN
+		    }
 
-		var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+		    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-		// To add the marker to the map, use the 'map' property
-		var marker = new google.maps.Marker({
-		  animation:google.maps.Animation.DROP,
-		  position: universityOfMissouri,
-		  map: map,
-		  title:"University of Missouri"
-		});
+		    // To add the marker to the map, use the 'map' property
+		    var marker = new google.maps.Marker({
+		      animation:google.maps.Animation.DROP,
+		      position: universityOfMissouri,
+		      map: map,
+		      title:"University of Missouri"
+		    });
 
-		var contentUniversityofMissouri = '<div id="content">'+
-		    '<div id="siteNotice">'+
-			'</div>'+
-			'<div id="bodyContent">'+
-			'<p><b>University of Missouri - Columbia</b></p>'+
-			'<p><a href="http://missouri.edu/">'+
-			'Visit Website</a> '+
-			'</div>'+
-			'</div>';
+		    var contentUniversityofMissouri = '<div id="content">'+
+		      '<div id="siteNotice">'+
+			    '</div>'+
+			    '<div id="bodyContent">'+
+			    '<p><b>University of Missouri - Columbia</b></p>'+
+			    '<p><a href="http://missouri.edu/">'+
+			    'Visit Website</a> '+
+			    '</div>'+
+			    '</div>';
 
-	    var infowindowuniversityofmissouri = new google.maps.InfoWindow();
+	      var infowindowuniversityofmissouri = new google.maps.InfoWindow();
 
-	    makeInfoWindowEvent(map, infowindowuniversityofmissouri, contentUniversityofMissouri, marker);
+	      makeInfoWindowEvent(map, infowindowuniversityofmissouri, contentUniversityofMissouri, marker);
+	    }
 	  }
-	}
 
 					// TODO Make these assignment operations more efficient
 					var missouriSTArray = new Array();
@@ -797,10 +796,10 @@ function Search() {
           }
 
           function makeInfoWindowEvent(map, infowindow, contentString, marker) {
-                google.maps.event.addListener(marker, 'click', function() {
-                  infowindow.setContent(contentString);
-                  infowindow.open(map, marker);
-                });
+            google.maps.event.addListener(marker, 'click', function() {
+              infowindow.setContent(contentString);
+              infowindow.open(map, marker);
+            });
           }
         });
 }
